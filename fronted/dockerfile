@@ -1,0 +1,27 @@
+# Use the official Node.js 18.17 image as a parent image
+FROM node:18.17
+
+# Set the working directory in the container
+WORKDIR /usr/src/app
+
+# Copy package.json and yarn.lock files into the working directory
+COPY package.json yarn.lock ./
+
+# Install dependencies
+RUN yarn install
+
+# Copy the rest of your application code
+COPY . .
+
+# Build the application
+RUN yarn build
+
+# Install serve to run the application
+RUN yarn global add serve
+
+# Command to serve the app using 'serve'
+# '-s' flag serves your static site and handles routing to your index.html file
+CMD ["serve", "-s", "build", "-l", "3000"]
+
+# Expose port 3000 to be accessible externally
+EXPOSE 3000
