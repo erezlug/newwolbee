@@ -155,13 +155,21 @@ special</h4>
                     className="dropdown-item"
                     onClick={() => handleOption("in3Days")}
                   >
+<<<<<<< HEAD
                     Postpone for 3 days
+=======
+                    Postpone in 3 days
+>>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
                   </button>
                   <button
                     className="dropdown-item"
                     onClick={() => handleOption("in1Week")}
                   >
+<<<<<<< HEAD
 Postpone for a week
+=======
+Postpone a week
+>>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
                   </button>
                   <button
                     className="dropdown-item"
@@ -214,13 +222,21 @@ her that you care</h4>
                     className="dropdown-item"
                     onClick={() => handleOption("in3Days")}
                   >
+<<<<<<< HEAD
                     Postpone for 3 days
+=======
+                    Postpone in 3 days
+>>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
                   </button>
                   <button
                     className="dropdown-item"
                     onClick={() => handleOption("in1Week")}
                   >
+<<<<<<< HEAD
 Postpone for a week
+=======
+Postpone a week
+>>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
                   </button>
                   <button
                     className="dropdown-item"
@@ -271,13 +287,21 @@ Set a time
                     className="dropdown-item"
                     onClick={() => handleOption("in3Days")}
                   >
+<<<<<<< HEAD
                     Postpone for 3 days
+=======
+                    Postpone in 3 days
+>>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
                   </button>
                   <button
                     className="dropdown-item"
                     onClick={() => handleOption("in1Week")}
                   >
+<<<<<<< HEAD
 Postpone for a week
+=======
+Postpone a week
+>>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
                   </button>
                   <button
                     className="dropdown-item"
@@ -332,13 +356,21 @@ birthday</h4>
                     className="dropdown-item"
                     onClick={() => handleOption("in3Days")}
                   >
+<<<<<<< HEAD
                     Postpone for 3 days
+=======
+                    Postpone in 3 days
+>>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
                   </button>
                   <button
                     className="dropdown-item"
                     onClick={() => handleOption("in1Week")}
                   >
+<<<<<<< HEAD
 Postpone for a week
+=======
+Postpone a week
+>>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
                   </button>
                   <button
                     className="dropdown-item"
@@ -393,13 +425,21 @@ personal touch</h4>
                     className="dropdown-item"
                     onClick={() => handleOption("in3Days")}
                   >
+<<<<<<< HEAD
                     Postpone for 3 days
+=======
+                    Postpone in 3 days
+>>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
                   </button>
                   <button
                     className="dropdown-item"
                     onClick={() => handleOption("in1Week")}
                   >
+<<<<<<< HEAD
 Postpone for a week
+=======
+Postpone a week
+>>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
                   </button>
                   <button
                     className="dropdown-item"
@@ -452,13 +492,21 @@ you don’t miss it</h4>
                     className="dropdown-item"
                     onClick={() => handleOption("in3Days")}
                   >
+<<<<<<< HEAD
                     Postpone for 3 days
+=======
+                    Postpone in 3 days
+>>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
                   </button>
                   <button
                     className="dropdown-item"
                     onClick={() => handleOption("in1Week")}
                   >
+<<<<<<< HEAD
 Postpone for a week
+=======
+Postpone a week
+>>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
                   </button>
                   <button
                     className="dropdown-item"
@@ -512,13 +560,21 @@ birthday wishes</h4>
                     className="dropdown-item"
                     onClick={() => handleOption("in3Days")}
                   >
+<<<<<<< HEAD
                     Postpone for 3 days
+=======
+                    Postpone in 3 days
+>>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
                   </button>
                   <button
                     className="dropdown-item"
                     onClick={() => handleOption("in1Week")}
                   >
+<<<<<<< HEAD
 Postpone for a week
+=======
+Postpone a week
+>>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
                   </button>
                   <button
                     className="dropdown-item"
@@ -571,13 +627,21 @@ her birthday at home.</h4>
                     className="dropdown-item"
                     onClick={() => handleOption("in3Days")}
                   >
+<<<<<<< HEAD
                     Postpone for 3 days
+=======
+                    Postpone in 3 days
+>>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
                   </button>
                   <button
                     className="dropdown-item"
                     onClick={() => handleOption("in1Week")}
                   >
+<<<<<<< HEAD
 Postpone for a week
+=======
+Postpone a week
+>>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
                   </button>
                   <button
                     className="dropdown-item"
@@ -633,13 +697,21 @@ Nicole</h4>
                     className="dropdown-item"
                     onClick={() => handleOption("in3Days")}
                   >
+<<<<<<< HEAD
                     Postpone for 3 days
+=======
+                    Postpone in 3 days
+>>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
                   </button>
                   <button
                     className="dropdown-item"
                     onClick={() => handleOption("in1Week")}
                   >
+<<<<<<< HEAD
 Postpone for a week
+=======
+Postpone a week
+>>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
                   </button>
                   <button
                     className="dropdown-item"

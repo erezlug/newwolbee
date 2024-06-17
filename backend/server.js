@@ -13,14 +13,22 @@ mongoose.connect(dbURL, { useNewUrlParser: true, useUnifiedTopology: true })
   .catch((error) => console.error("Error connecting to DB:", error));
 
 const corsOptions = {
+<<<<<<< HEAD
   origin: 'https://wolbee-front-gkfchuwp6q-uc.a.run.app' // Replace this with your frontend URL
+=======
+  origin: 'http://localhost:3000' // Replace this with your frontend URL
+>>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
 };
 
 app.use(cors(corsOptions));
 
 
 const xlsx = require('xlsx');
+<<<<<<< HEAD
 const workbook = xlsx.readFile('C:/Users/benal/Desktop/‏‏themeforest-psinWIdw-smarthr-react-an-template - עותק/react/template/backend/employeesUpdated.xlsx');
+=======
+const workbook = xlsx.readFile('employees.xlsx');
+>>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
 const worksheet = workbook.Sheets[workbook.SheetNames[0]];
 const data = xlsx.utils.sheet_to_json(worksheet);
 
@@ -32,7 +40,11 @@ const employeeSchema = new mongoose.Schema({
   employeeOfManagerId: String,
   id: String,
   role: String,
+<<<<<<< HEAD
   DataOfBirth: String,
+=======
+  DataOfBirth: Date,
+>>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
   PlaceOfResidence: String,
   FamilyStatus: String,
   NumOfChildren: Number,

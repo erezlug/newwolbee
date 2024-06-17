@@ -46,10 +46,17 @@ const Contacts = () => {
           <div className="chat-main-wrapper">
             <div className="col-lg-12 message-view">
               <div className="chat-window">
+<<<<<<< HEAD
                 <div className="fixed-header" style={{backgroundColor:'	#D3D3D3'}}>
                   <div className="row align-items-center">
                     <div className="col-6">
                       <h4 className="page-title mb-0">Notification's</h4>
+=======
+                <div className="fixed-header">
+                  <div className="row align-items-center">
+                    <div className="col-6">
+                      <h4 className="page-title mb-0">Contacts</h4>
+>>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
                     </div>
                     <div className="col-6">
                       <div className="navbar justify-content-end">
@@ -59,7 +66,10 @@ const Contacts = () => {
                               type="text"
                               className="form-control"
                               placeholder="Search"
+<<<<<<< HEAD
                               style={{width:'300px'}}
+=======
+>>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
                             />
                             <span className="input-group-append">
                               <button className="btn" type="button">
@@ -78,7 +88,18 @@ const Contacts = () => {
                             >
                               <i className="fa fa-cog" />
                             </Link>
+<<<<<<< HEAD
                            
+=======
+                            <div className="dropdown-menu">
+                              <Link className="dropdown-item" to="#">
+                                Menu 1
+                              </Link>
+                              <Link className="dropdown-item" to="#">
+                                Menu 2
+                              </Link>
+                            </div>
+>>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
                           </li>
                         </ul>
                       </div>

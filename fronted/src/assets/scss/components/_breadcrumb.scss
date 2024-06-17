@@ -9,7 +9,11 @@
     }
 	.breadcrumb-item {
 		&.active {
+<<<<<<< HEAD
 			color: #f7f7f7;
+=======
+			color: $primary;
+>>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
 		}
 	}
 
@@ -24,8 +28,13 @@
             &::before {
                 float: left;
                 padding-right: 0.5rem;
+<<<<<<< HEAD
                 color: #f7f7f7;
                 
+=======
+                color: $sub-title;
+                content: "/"
+>>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
             }
         }
     }

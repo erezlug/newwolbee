@@ -1,10 +1,16 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
 import { Table } from "antd";
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
+<<<<<<< HEAD
 import { TiPin } from "react-icons/ti";
+=======
+>>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
 
 export const ProjectDetails = () => {
   // State to store the importance levels
@@ -18,7 +24,11 @@ export const ProjectDetails = () => {
 
   // Styles for the progress circles
   const circleContainerStyle = {
+<<<<<<< HEAD
     width: '160px',
+=======
+    width: '150px',
+>>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
     margin: '20px',
     position: 'relative',
     transition: 'transform 0.3s ease',
@@ -41,6 +51,7 @@ export const ProjectDetails = () => {
   const experienceData = [
     {
       id: 1,
+<<<<<<< HEAD
       name: "Compensation",
       time: "21/08/2023",
     },
@@ -53,10 +64,25 @@ export const ProjectDetails = () => {
       id: 3,
       name: "Personal interview",
       time: "17/04/2024",
+=======
+      name: "january 2nd, 04:35 AM",
+      time: "Jan 2023 - Present (5 years 2 months)",
+    },
+    {
+      id: 2,
+      name: "Web Designer at Ron-tech",
+      time: "Jan 2023 - Present (5 years 2 months)",
+    },
+    {
+      id: 3,
+      name: "Web Designer at Dalt Technology",
+      time: "2023 2023 - Present (5 years 2 months)",
+>>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
     },
     // Add more experience info data as needed
   ];
 
+<<<<<<< HEAD
   
   
   const titleStyle = {
@@ -83,6 +109,8 @@ export const ProjectDetails = () => {
   
   const pinIconSize = 24;
 
+=======
+>>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
   const getColor = (importance) => {
     switch (importance) {
       case 'High Importance':
@@ -99,16 +127,27 @@ export const ProjectDetails = () => {
   const containerStyle = {
     display: 'flex',
     // justifyContent: 'space-between',
+<<<<<<< HEAD
     gap:'15px'
+=======
+    gap:'50px'
+>>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
   };
 
   const boxStyle = {
     backgroundColor: 'lightgrey',
+<<<<<<< HEAD
     width: '380px',
     height: '300px',
     padding: '20px',
     marginBottom: '20px',
     border: 'solid black 0.3px'
+=======
+    width: '350px',
+    height: '400px',
+    padding: '20px',
+    marginBottom: '20px',
+>>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
   };
 
   return (
@@ -119,6 +158,7 @@ export const ProjectDetails = () => {
       <div className="fade" id="emp_assets" style={{}}>
       <div style={containerStyle}>
       <div style={boxStyle}>
+<<<<<<< HEAD
             <h3 style={titleStyle}>Wolbee’s Top insights</h3>
             <br />
             <p style={paragraphStyle}>
@@ -150,6 +190,19 @@ export const ProjectDetails = () => {
               Will never miss a game of liverpool
             </p>
           </div>
+=======
+        <h3>Wolbee’s Top insights</h3>
+        <p>פסקה ראשונה.</p>
+        <p>פסקה שנייה.</p>
+        <p>פסקה שלישית.</p>
+      </div>
+      <div style={boxStyle}>
+        <h3>Latest insights</h3>
+        <p>פסקה ראשונה.</p>
+        <p>פסקה שנייה.</p>
+        <p>פסקה שלישית.</p>
+      </div>
+>>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
     
     <div className="col-md-6 d-flex" style={{width:'450px'}}>
               <div className="card profile-box flex-fill">
@@ -267,4 +320,8 @@ export const ListItem = ({ title, text }) => (
   </li>
 );
 
+<<<<<<< HEAD
 export default ProjectDetails;
+=======
+export default ProjectDetails;
+>>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb

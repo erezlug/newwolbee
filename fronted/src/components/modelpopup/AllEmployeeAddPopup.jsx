@@ -698,9 +698,15 @@ const AllEmployeeAddPopup = () => {
                                 height: '40px',
                                 border: 'none',
                                 borderRadius: '5px',
+<<<<<<< HEAD
                                 background: isAddActivityBtnHovered ?
                                   '#e3a31d' : 'linear-gradient(to right, #FF902F 0%, #FC6075 100%)',
                                 color: 'white',
+=======
+                                backgroundColor: isAddActivityBtnHovered ?
+                                  '#e3a31d' : '#FEB723',
+                                color: 'black',
+>>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
                                 transition: 'color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out',
                                 fontSize: '15px'
                               }}>
@@ -845,12 +851,20 @@ const AllEmployeeAddPopup = () => {
                                 height: '40px',
                                 borderRadius: '5px',
                                 border: 'none',
+<<<<<<< HEAD
                                 background: isAddSingerBtnHovered ? '#e3a31d' :
                                   'linear-gradient(to right, #FF902F 0%, #FC6075 100%)',
                                 fontSize: '15px',
                                 transition: 'color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out',
                                 fontSize: '15px',
                                 color: 'white'
+=======
+                                backgroundColor: isAddSingerBtnHovered ? '#e3a31d' :
+                                  '#FEB723',
+                                fontSize: '15px',
+                                transition: 'color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out',
+                                fontSize: '15px'
+>>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
                               }}>
                               Add singer</button>
                             <div className="col-sm-2">
@@ -955,10 +969,16 @@ const AllEmployeeAddPopup = () => {
                                 height: '40px',
                                 borderRadius: '5px',
                                 border: 'none',
+<<<<<<< HEAD
                                 background: isAddFoodAndDrinkBtnHovered ? '#e3a31d' :
                                   'linear-gradient(to right, #FF902F 0%, #FC6075 100%)',
                                 fontSize: '15px',
                                 color: 'white',
+=======
+                                backgroundColor: isAddFoodAndDrinkBtnHovered ? '#e3a31d' :
+                                  '#FEB723',
+                                fontSize: '15px',
+>>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
                                 transition: 'color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out',
                               }}>
                               Add food & drink</button>
@@ -1045,10 +1065,16 @@ const AllEmployeeAddPopup = () => {
                                 height: '40px',
                                 borderRadius: '5px',
                                 border: 'none',
+<<<<<<< HEAD
                                 background: isAddRestaurantBtnHovered ? '#e3a31d' :
                                   'linear-gradient(to right, #FF902F 0%, #FC6075 100%)',
                                 fontSize: '15px',
                                 color: 'white',
+=======
+                                backgroundColor: isAddRestaurantBtnHovered ? '#e3a31d' :
+                                  '#FEB723',
+                                fontSize: '15px',
+>>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
                                 transition: 'color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out',
                               }}
                             >Add restaurant
@@ -1155,9 +1181,15 @@ const AllEmployeeAddPopup = () => {
                                 height: '40px',
                                 border: 'none',
                                 borderRadius: '5px',
+<<<<<<< HEAD
                                 background: isAddHobbyBtnHovered ?
                                   '#e3a31d' : 'linear-gradient(to right, #FF902F 0%, #FC6075 100%)',
                                 color: 'white',
+=======
+                                backgroundColor: isAddHobbyBtnHovered ?
+                                  '#e3a31d' : '#FEB723',
+                                color: 'black',
+>>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
                                 transition: 'color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out',
                                 fontSize: '15px'
                               }}>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // const getMenuItemStyle = (menuValue) => {
 //   const restrictedItems = ['1 X 1', 'To do List', 'Useful information', 'Create new event'];
 //   if (restrictedItems.includes(menuValue)) {
@@ -219,6 +220,205 @@ export const SidebarData = [
   //     },
   //   ],
   // },
+=======
+
+export const SidebarData = [
+
+{
+    tittle: 'EMPLOYEES',
+    showAsTab: false,
+    separateRoute: false,
+    menu: [
+      {
+        menuValue: 'Employees',
+        hasSubRoute: true,
+        showSubRoute: false,
+        route: "#",
+        icon: "la la-user",
+        subMenus: [
+          {
+            menuValue: 'All Employees',
+            route: "/employees",
+          },
+          {
+            menuValue: 'Holidays',
+            route: "/holidays",
+          },
+          {
+            menuValue: 'Leaves(Admin)',
+            route: "/adminleaves",
+          },
+          {
+            menuValue: 'Leaves(Employee)',
+            route: "/leaves-employee",
+          },
+          {
+            menuValue: 'Leave Settings',
+            route: "/leave-settings",
+          },
+          {
+            menuValue: 'Attendance (Admin)',
+            route: "/adminattendance",
+          },
+          {
+            menuValue: 'Attendance (Employee)',
+            route: "/attendance-employee",
+          },
+          {
+            menuValue: 'Departments',
+            route: "/departments",
+          },
+          {
+            menuValue: 'Designations',
+            route: "/designations",
+          },
+          {
+            menuValue: 'Timesheet',
+            route: "/timesheet",
+          },
+          {
+            menuValue: 'Shift & Schedule',
+            route: "/shift-scheduling",
+          },
+          {
+            menuValue: 'Overtime',
+            route: "/overtime",
+          },
+        ],
+      },
+      {
+        menuValue: 'Clients',
+        hasSubRoute: false,
+        showSubRoute: false,
+        route: "/clients",
+        icon: "la la-users",
+      },
+    
+      {
+        menuValue: 'Projects',
+        hasSubRoute: true,
+        showSubRoute: false,
+        icon: "la la-rocket",
+        subMenus: [
+          {
+            menuValue: 'gifts',
+            route: "/projects",
+          },
+          {
+            menuValue: 'Tasks',
+            route: "/tasks",
+          },
+          {
+            menuValue: 'close events',
+            route: "/task-board",
+          },
+        ],
+      },
+      {
+        menuValue: 'Tickets',
+        hasSubRoute: true,
+        showSubRoute: false,
+        icon: "la la-ticket",
+        subMenus: [
+          {
+            menuValue: 'Tickets',
+            route: "/tickets",
+          },
+          {
+            menuValue: 'Ticket Details',
+            route: "/ticket-details",
+          },
+        
+        ],
+      },
+    ],
+  },
+{
+    tittle: 'MAIN',
+    showAsTab: false,
+    separateRoute: false,
+    menu: [
+      {
+        menuValue: 'Dashboard',
+        hasSubRoute: true,
+        showSubRoute: false,
+        route: "#",
+        icon: "la la-dashcube",
+        subMenus: [
+          {
+            menuValue: 'Admin Dashboard',
+            route: "/admin-dashboard",
+          },
+          {
+            menuValue: 'Employee Dashboard',
+            route: "/employee-dashboard",
+          },
+          {
+            menuValue: 'Deals Dashboard',
+            route: "/deals-dashboard",
+          },
+          {
+            menuValue: 'Leads Dashboard',
+            route: "/leads-dashboard",
+          },
+        ],
+      },
+      {
+        menuValue: 'Apps',
+        hasSubRoute: true,
+        showSubRoute: false,
+        route: "#",
+        icon: "la la-cube",
+        subMenus: [
+          {
+            menuValue: 'Chats',
+            route: "/chat",
+          },
+          {
+            menuValue: 'Calls',
+            route: "#",
+            showMenuRoute: true,
+            subMenusValues: [
+                {
+                    menuValue: 'Voice Call',
+                    route: "/voice-call",
+                  },
+                {
+                    menuValue: 'Video Call',
+                    route: "/video-call",
+                  },
+                {
+                    menuValue: 'Outgoing Call',
+                    route: "/outgoing-call",
+                  },
+                {
+                    menuValue: 'Incoming Call',
+                    route: "/incoming-call",
+                  },
+            ]
+          },
+          {
+            menuValue: 'Calendar',
+            route: "/events",
+          },
+          {
+            menuValue: 'Notifications',
+            route: "/contacts",
+          },
+          {
+            menuValue: 'Email',
+            route: "/inbox",
+          },
+          {
+            menuValue: 'File Manager',
+            route: "/file-manager",
+          },
+        ],
+      },
+    ],
+  },
+  
+>>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
   // {
   //   tittle: 'CRM',
   //   showAsTab: false,
@@ -280,8 +480,13 @@ export const SidebarData = [
   //   showAsTab: false,
   //   separateRoute: false,
   //   menu: [
+<<<<<<< HEAD
 
 
+=======
+    
+    
+>>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
   //     {
   //       menuValue: 'Sales',
   //       hasSubRoute: true,
@@ -336,7 +541,11 @@ export const SidebarData = [
   //           menuValue: 'Budget Expenses',
   //           route: "/budget-expenses",
   //         },
+<<<<<<< HEAD
 
+=======
+         
+>>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
   //       ],
   //     },
 
@@ -358,8 +567,13 @@ export const SidebarData = [
   //           menuValue: 'Payroll Items',
   //           route: "/payroll-items",
   //         },
+<<<<<<< HEAD
 
 
+=======
+         
+         
+>>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
   //       ],
   //     },
   //     {
@@ -507,7 +721,11 @@ export const SidebarData = [
   //           icon: "la la-times-circle",
   //         },
 
+<<<<<<< HEAD
 
+=======
+          
+>>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
   //   ],
   // },
 
@@ -596,7 +814,11 @@ export const SidebarData = [
   //           route: "/company-settings",
   //           icon: "la la-cog",
   //         },
+<<<<<<< HEAD
 
+=======
+      
+>>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
   //   ],
   // },
   // {
@@ -720,6 +942,7 @@ export const SidebarData = [
   //             }
   //           ]
   //         }
+<<<<<<< HEAD
 
   //   ],
   // },
@@ -727,6 +950,15 @@ export const SidebarData = [
 
 
 
+=======
+          
+  //   ],
+  // },
+ 
+ 
+  
+ 
+>>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
   // {
   //   tittle: 'UI INTERFACE',
   //   showAsTab: false,
@@ -849,7 +1081,11 @@ export const SidebarData = [
   //             { menuValue: "Data Table", route: "/data-tables" }
   //           ]
   //         }
+<<<<<<< HEAD
 
+=======
+          
+>>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
   //   ],
   // },
   // {
@@ -880,6 +1116,7 @@ export const SidebarData = [
   //       icon: "la la-share-alt",
   //       subMenus: [
   //         { menuValue: "Level 1", route: "#" },
+<<<<<<< HEAD
 
   //       ]
   //     },
@@ -888,3 +1125,13 @@ export const SidebarData = [
   //   ],
   // },
 ];
+=======
+         
+  //       ]
+  //     },
+     
+    
+  //   ],
+  // },
+];
+>>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb

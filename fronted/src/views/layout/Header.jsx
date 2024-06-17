@@ -7,7 +7,10 @@ import { FaRegBell, FaRegComment } from "react-icons/fa";
 import { useLocation } from "react-router-dom/dist";
 import { useTranslation } from "react-i18next";
 import i18n from "../../i18n";
+<<<<<<< HEAD
 import manager from '../../imgs/managerProfilePic.jpg'
+=======
+>>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
 
 const Header = (props) => {
   const initialNotifications = notificationsData.notifications.map(notification => ({
@@ -118,20 +121,33 @@ const Header = (props) => {
     <div className="header" style={{ right: "0px" }}>
       <div className="header-left">
         <Link to="/admin-dashboard" className="logo">
+<<<<<<< HEAD
         <img src={Applogo} alt="img" style={{height:'42px',marginTop:'-12px'}} /> 
+=======
+        <img src={Applogo} alt="img" style={{height:'45px'}} /> 
+>>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
         </Link>
         <Link to="/admin-dashboard" className="logo2">
           <img src={Applogo} width={40} height={40} alt="img" />
         </Link>
       </div>
+<<<<<<< HEAD
       {/* <Link id="toggle_btn" to="#" style={{ display: pathname.includes("tasks") ? "none" : pathname.includes("compose") ? "none" : "" }}>
+=======
+      <Link id="toggle_btn" to="#" style={{ display: pathname.includes("tasks") ? "none" : pathname.includes("compose") ? "none" : "" }}>
+>>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
         <span className="bar-icon">
           <span />
           <span />
           <span />
         </span>
+<<<<<<< HEAD
       </Link> */}
       <div className="page-title-box" style={{marginTop:'5px'}}>
+=======
+      </Link>
+      <div className="page-title-box">
+>>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
      <h4> Hi  <span style={{ fontWeight: 'bold', fontSize: '20px' }}>  {ProfileName ? `${ProfileName}` : "Admin"} </span>welcome back to wolbee </h4> 
 
 
@@ -238,7 +254,11 @@ const Header = (props) => {
               <ul className="notification-list">
                 {datas.map((value, index) => (
                   <li className="notification-message" key={index}>
+<<<<<<< HEAD
                     <Link onClick={() => localStorage.setItem("minheight", "true")} to="#">
+=======
+                    <Link onClick={() => localStorage.setItem("minheight", "true")} to="/conversation/chat">
+>>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
                       <div className="list-item">
                         <div className="list-left">
                           <span className="avatar">
@@ -258,21 +278,34 @@ const Header = (props) => {
               </ul>
             </div>
             <div className="topnav-dropdown-footer">
+<<<<<<< HEAD
               <Link onClick={() => localStorage.setItem("minheight", "true")} to="#">View all Messages</Link>
+=======
+              <Link onClick={() => localStorage.setItem("minheight", "true")} to="/conversation/chat">View all Messages</Link>
+>>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
             </div>
           </div>
         </li>
         <li className="nav-item dropdown has-arrow main-drop">
           <Link to="#" className="dropdown-toggle nav-link" data-bs-toggle="dropdown" onClick={handleProfile}>
             <span className="user-img me-1">
+<<<<<<< HEAD
               <img src={manager} alt="img" />
+=======
+              <img src={Avatar_02} alt="img" />
+>>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
               <span className="status online" />
             </span>
             <span>{ProfileName ? `${ProfileName}` : "Admin"}</span>
           </Link>
           <div className={`dropdown-menu dropdown-menu-end ${profile ? "show" : ""}`}>
+<<<<<<< HEAD
             <Link className="dropdown-item" to="/admin-dashboard">My Profile</Link>
             <Link className="dropdown-item" to="#">Settings</Link>
+=======
+            <Link className="dropdown-item" to="/profile">My Profile</Link>
+            <Link className="dropdown-item" to="/settings/companysetting">Settings</Link>
+>>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
             <Link className="dropdown-item" to="/">Logout</Link>
           </div>
         </li>
@@ -282,9 +315,15 @@ const Header = (props) => {
           <i className="fa fa-ellipsis-v" />
         </Link>
         <div className="dropdown-menu dropdown-menu-end dropdown-menu-right">
+<<<<<<< HEAD
           <Link className="dropdown-item" to="/admin-dashboard">My Profile</Link>
           <Link className="dropdown-item" to="#">Settings</Link>
           <Link className="dropdown-item" to="/">Logout</Link>
+=======
+          <Link className="dropdown-item" to="/profile">My Profile</Link>
+          <Link className="dropdown-item" to="/settings/companysetting">Settings</Link>
+          <Link className="dropdown-item" to="/login">Logout</Link>
+>>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
         </div>
       </div>
     </div >
