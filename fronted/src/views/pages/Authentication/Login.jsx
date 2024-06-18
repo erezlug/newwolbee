@@ -74,19 +74,11 @@ const Login = () => {
     }
   };
 
-<<<<<<< HEAD
   // useEffect(() => {
   //   checkCurrentId();
   //   setValue("email", localStorage.getItem("email"));
   //   setValue("password", localStorage.getItem("password"));
   // }, []);
-=======
-  useEffect(() => {
-    checkCurrentId();
-    setValue("email", localStorage.getItem("email"));
-    setValue("password", localStorage.getItem("password"));
-  }, []);
->>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
 
   const checkCurrentId = () => {
     const storedId = localStorage.getItem("currentId");
