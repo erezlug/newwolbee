@@ -7,7 +7,7 @@ const cors = require("cors")
 app.use(cors())
 const path = require('path');
 // התחברות לבסיס הנתונים
-const dbURL = "mongodb+srv://benaloni230:asdf123123@cluster0.3kuoij5.mongodb.net/wolbeedb'";
+const dbURL = "mongodb+srv://benaloni230:asdf123123@cluster0.3kuoij5.mongodb.net/wolbeedbb'";
 mongoose.connect(dbURL, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log("DB connected"))
   .catch((error) => console.error("Error connecting to DB:", error));
