@@ -4,7 +4,6 @@ import AllEmployeeAddPopup from "../../../components/modelpopup/AllEmployeeAddPo
 import Breadcrumbs from "../../../components/Breadcrumbs";
 import DeleteModal from "../../../components/modelpopup/DeleteModal";
 import EmployeeListFilter from "../../../components/EmployeeListFilter";
-<<<<<<< HEAD
 import lisa from '../../../imgs/avatar_1.JPG'
 import tom from '../../../imgs/avatar_2.JPG'
 import david from '../../../imgs/avatar_3.JPG'
@@ -17,23 +16,12 @@ import justin from '../../../imgs/avatar_9.JPG'
 import selena from '../../../imgs/avatar_10.JPG'
 import emma from '../../../imgs/avatar_11.JPG'
 import sofia from '../../../imgs/avatar_12.JPG'
-=======
-import avatar_1 from '../../../imgs/avatar_1.jpg'
-import avatar_2 from '../../../imgs/avatar_2.jpeg'
-import avatar_3 from '../../../imgs/avatar_3.jpeg'
-import avatar_4 from '../../../imgs/avatar_4.jpg'
-import avatar_5 from '../../../imgs/avatar_5.avif'
-import avatar_6 from '../../../imgs/avatar_6.avif'
->>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
 
 const AllEmployee = () => {
   const [employees, setEmployees] = useState([]);
   const [favoriteEmployees, setFavoriteEmployees] = useState([]);
 
-<<<<<<< HEAD
   const avatars = [lisa, tom, david, nicole, brad, john, mark, josh, justin, selena, emma, sofia]
-=======
->>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
   const toggleFavorite = (event, employeeId) => {
     event.preventDefault(); // מניעת התנהגות ברירת המחדל של הלינק
     const updatedFavoriteEmployees = [...favoriteEmployees]; // העתקת רשימת העובדים המועדפים
@@ -48,11 +36,7 @@ const AllEmployee = () => {
   };
   
 
-<<<<<<< HEAD
  
-=======
-  const avatars = [avatar_1, avatar_2,avatar_3,avatar_4,avatar_5,avatar_6 /* הוסף כאן את שאר התמונות */];
->>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
   useEffect(() => {
     const manager = localStorage.getItem('credencial');
     const currentLoggedInManager = JSON.parse(manager);
@@ -143,11 +127,7 @@ const AllEmployee = () => {
                         data-bs-toggle="modal"
                         data-bs-target="#edit_employee"
                       >
-<<<<<<< HEAD
                         <i className="fa fa-pencil m-r-5" /> Edit
-=======
-                        <i className="fa fa-pencil m-r-5" /> ערוך
->>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
                       </Link>
                       <Link
                         className="dropdown-item"
@@ -155,11 +135,7 @@ const AllEmployee = () => {
                         data-bs-toggle="modal"
                         data-bs-target="#delete"
                       >
-<<<<<<< HEAD
                         <i className="fa-regular fa-trash-can m-r-5" /> Delete
-=======
-                        <i className="fa-regular fa-trash-can m-r-5" /> מחק
->>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
                       </Link>
                     </div>
                   </div>
