@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
 import React from "react";
 import { Link } from "react-router-dom";
 import PersonalInformationModelPopup from "../../../components/modelpopup/PersonalInformationModelPopup";
@@ -324,8 +320,4 @@ const ProfileTab = () => {
   );
 };
 
-<<<<<<< HEAD
 export default ProfileTab;
-=======
-export default ProfileTab;
->>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
