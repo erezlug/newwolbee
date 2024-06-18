@@ -5,26 +5,18 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import dismissIcon from '../../../../../imgs/dismissIcon.png';
 import snoozeIcon from '../../../../../imgs/snoozeIcon.png';
-<<<<<<< HEAD
 // import employee1 from '../../../../../imgs/avatar_4.jpg';
 // import employee2 from '../../../../../imgs/avatar_6.avif';
-=======
-import employee1 from '../../../../../imgs/avatar_4.jpg';
-import employee2 from '../../../../../imgs/avatar_6.avif';
->>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
 import { Modal, notification } from "antd";
 import off from '../../../../../imgs/off.png'
 import on from '../../../../../imgs/on.png'
 import offgift from '../../../../../imgs/giftoff.png'
 import './modal.css'
-<<<<<<< HEAD
 import rescheduling from '../../../../../imgs/rescheduling.png'
 import email from '../../../../../imgs/email.png'
 import { TiPin } from "react-icons/ti";
 import nicole from '../../../../../imgs/avatar_4.JPG'
 import jacob from '../../../../../imgs/jacob.jpg'
-=======
->>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
 
 
 const ContactContents = () => {
@@ -42,11 +34,7 @@ const ContactContents = () => {
       read: false,
       viewed: false,
       dismissed: false,
-<<<<<<< HEAD
       image: nicole
-=======
-      image: employee2
->>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
     },
     {
       id: 2,
@@ -77,11 +65,7 @@ const ContactContents = () => {
       read: false,
       viewed: false,
       dismissed: false,
-<<<<<<< HEAD
       image: nicole
-=======
-      image: employee2
->>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
     },
     {
       id: 5,
@@ -92,11 +76,7 @@ const ContactContents = () => {
       read: false,
       viewed: false,
       dismissed: false,
-<<<<<<< HEAD
       image: jacob
-=======
-      image: employee1
->>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
     }
   ]);
 
@@ -365,12 +345,8 @@ const ContactContents = () => {
   const ulStyle = {
     margin: 0,
     padding: 0,
-<<<<<<< HEAD
     textAlign: 'center', // Center align the text
     listStyleType: 'none', // Remove bullet points
-=======
- 
->>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
   };
   
   const listItemStyle = {
@@ -392,7 +368,6 @@ const ContactContents = () => {
   
 
 
-<<<<<<< HEAD
   const importanceIndicatorStyle = (importance) => {
     let backgroundColor, color;
 
@@ -432,24 +407,6 @@ const ContactContents = () => {
       right: '50px'
     };
   };
-=======
-  const importanceIndicatorStyle = {
-    width: "100px",
-    height: "30px",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    fontWeight: "bold",
-    marginRight: "20px",
-    fontSize: "14px",
-    backgroundColor: 'black',
-    color: 'white',
-    borderRadius: '5px',
-    position: 'relative',
-    bottom: '33px',
-    right: '50px'
-  };
->>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
 
   const messageStyle = (id) => ({
     flexGrow: 1,
@@ -484,11 +441,7 @@ const ContactContents = () => {
     fontSize: '18px',
     cursor: 'pointer'
   };
-<<<<<<< HEAD
   const pinIconSize = 24;
-=======
-
->>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
   const tooltipStyle = {
     position: 'absolute',
     backgroundColor: '#333',
@@ -577,13 +530,9 @@ const ContactContents = () => {
             ...notificationStyle(notification),
             backgroundColor: notification.dismissed ? '#f2f2f2' : 'white',
           }}>
-<<<<<<< HEAD
          <div style={importanceIndicatorStyle(notification.importance)}>
             {notification.importance}
           </div>
-=======
-          <div style={importanceIndicatorStyle}>{notification.importance}</div>
->>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
           <div onClick={() => {
             if (notification.id === 4) {
               openModal(notification);
@@ -660,7 +609,6 @@ by making sure they have their favorite foods available. </h5>
 </li>
  </ul>
    
-<<<<<<< HEAD
    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
    <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
           <a
@@ -689,27 +637,6 @@ href={`mailto:organizingteam@example.com?subject=Fourth%20of%20July%20Celebratio
             </div>
           </a>
         </div>
-=======
-   <div style={{ display: 'flex',
-    flexWrap: 'wrap',}}>
-    <div
-          className="project-card"
-          style={smallprojectCardStyle} 
-          onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
-          onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
-        >
-          <Link to="/project/7">
-            <div className="image-container" style={imageContainerStyle}>
-              <img src={off} alt="Project Seven" style={imgStyle} />
-            </div>
-            <div className="project-details" style={projectDetailsTextStyle}>
-              <h3 style={h3Style}>Click here to email the organizing team.</h3>
-              
-            </div>
-          </Link>
-        </div>
-
->>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
  </div>
         </Modal>
       )}
@@ -725,11 +652,7 @@ href={`mailto:organizingteam@example.com?subject=Fourth%20of%20July%20Celebratio
 regarding "Upgrading Security Systems." This time overlaps with Emma’s pre designated
 important personal time. </h5> 
 <br />
-<<<<<<< HEAD
 <Link to='#'><button onLoad={''}>see the meeting</button></Link>
-=======
-<Link to='/events'><button>see the meeting</button></Link>
->>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
 <br/>
 <br/>
 <h6>Balancing work and personal life is vital for employee well-being and commitment. This
@@ -752,11 +675,7 @@ Just by discussing this with her, you are already making a difference</h6>
         >
           <Link to="/project/7">
             <div className="image-container" style={imageContainerStyle}>
-<<<<<<< HEAD
               <img src={rescheduling} alt="Project Seven" style={imgStyle} />
-=======
-              <img src={off} alt="Project Seven" style={imgStyle} />
->>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
             </div>
             <div className="project-details" style={projectDetailsTextStyle}>
               <h3 style={h3Style}>Reschedule:
