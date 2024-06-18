@@ -197,11 +197,7 @@ const Register = (props) => {
                       </span>
                     </div>
 
-<<<<<<< HEAD
                     <div className="input-block text-center"  style={{ background: 'linear-gradient(to right, white, #FFC502, #FFEA00)'}}>
-=======
-                    <div className="input-block text-center"  style={{ background: 'linear-gradient(to right, white, #FFC502, #FFEA00)' }}>
->>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
                       <Link
                         to="#"
                         className="btn btn-primary account-btn"
@@ -228,8 +224,4 @@ const Register = (props) => {
   );
 };
 
-<<<<<<< HEAD
 export default Register
-=======
-export default Register
->>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
