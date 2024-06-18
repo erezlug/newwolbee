@@ -4,7 +4,6 @@ import { Link, useParams } from "react-router-dom";
 import ProfileTab from "./ProfileTab";
 import Breadcrumbs from "../../../components/Breadcrumbs";
 import moment from "moment";
-<<<<<<< HEAD
 import lisa from '../../../imgs/avatar_1.JPG'
 import tom from '../../../imgs/avatar_2.JPG'
 import david from '../../../imgs/avatar_3.JPG'
@@ -18,14 +17,10 @@ import selena from '../../../imgs/avatar_10.JPG'
 import emma from '../../../imgs/avatar_11.JPG'
 import sofia from '../../../imgs/avatar_12.JPG'
 import { TiPin } from "react-icons/ti";
-=======
-
->>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
 const Profile = () => {
   const { employeeId } = useParams();
   const [selectedEmployee, setSelectedEmployee] = useState(null);
 
-<<<<<<< HEAD
   const avatars = {
     '1': brad,
     '2': john,
@@ -41,8 +36,6 @@ const Profile = () => {
     '12': selena
   };
 
-=======
->>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
   useEffect(() => {
     const employeesArrJson = localStorage.getItem('employeesArr');
     const currentManagerEmployeesArr = JSON.parse(employeesArrJson);
@@ -60,20 +53,10 @@ const Profile = () => {
     <>
       <div className="page-wrapper">
         <div className="content container-fluid">
-<<<<<<< HEAD
         <h1>   {selectedEmployee.fullName} Profile</h1>
         <br />
         <br />
         
-=======
-          <Breadcrumbs
-            maintitle="Profile"
-            title="Dashboard"
-            subtitle="Profile"
-            modal="#add_indicator"
-            name="Add New"
-          />
->>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
           <div className="card mb-0">
             <div className="card-body">
               <div className="row">
@@ -82,11 +65,7 @@ const Profile = () => {
                     <div className="profile-img-wrap">
                       <div className="profile-img">
                         <Link to="#">
-<<<<<<< HEAD
                         <img src={avatars[selectedEmployee.id]} alt="UserImage" />
-=======
-                          <img src={Avatar_02} alt="User Image" />
->>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
                         </Link>
                       </div>
                     </div>
@@ -183,11 +162,7 @@ const Profile = () => {
                       data-bs-toggle="tab"
                       className="nav-link active"
                     >
-<<<<<<< HEAD
                      | Insights |
-=======
-                     | Statistics about the employee |
->>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
                     </Link>
                   </li>
 
@@ -195,15 +170,9 @@ const Profile = () => {
                     <Link
                       to="#emp_profile"
                       data-bs-toggle="tab"
-<<<<<<< HEAD
                       className="nav-link"
                     >
                      | General info |
-=======
-                      className="nav-link "
-                    >
-                     | Profile |
->>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
                     </Link>
                   </li>
 
@@ -215,11 +184,7 @@ const Profile = () => {
                       data-bs-toggle="tab"
                       className="nav-link"
                     >
-<<<<<<< HEAD
                      | Training and development |
-=======
-                     | Insights about the employee |
->>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
                     </Link>
                   </li>
                   <li className="nav-item">
@@ -228,7 +193,6 @@ const Profile = () => {
                       data-bs-toggle="tab"
                       className="nav-link"
                     >
-<<<<<<< HEAD
                       | Interviews |
                       <small className="text-danger ms-1"></small>
                     </Link>
@@ -250,9 +214,6 @@ const Profile = () => {
                       className="nav-link"
                     >
                       | Wellness and engagement |
-=======
-                      | Questions about the employee in the interview |
->>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
                       <small className="text-danger ms-1"></small>
                     </Link>
                   </li>
