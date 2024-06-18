@@ -4,10 +4,10 @@ import AllEmployeeAddPopup from "../../../components/modelpopup/AllEmployeeAddPo
 import Breadcrumbs from "../../../components/Breadcrumbs";
 import DeleteModal from "../../../components/modelpopup/DeleteModal";
 import EmployeeListFilter from "../../../components/EmployeeListFilter";
-import lisa from '../../../imgs/avatar_1.jpg'
+import lisa from '../../../imgs/avatar_1.JPG'
 import tom from '../../../imgs/avatar_2.JPG'
 import david from '../../../imgs/avatar_3.JPG'
-import nicole from '../../../imgs/avatar_4.jpg'
+import nicole from '../../../imgs/avatar_4.JPG'
 import brad from '../../../imgs/avatar_5.JPG'
 import john from '../../../imgs/avatar_6.JPG'
 import mark from '../../../imgs/avatar_7.JPG'
