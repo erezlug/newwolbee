@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import React, { useState } from "react";
+// import axios from "axios";
 import Charts from "./charts";
 import Reports from "./Reports";
 import Statistics from "./statistics";
@@ -8,21 +8,26 @@ import PaymentTable from "./paymentTable";
 import ClientTable from "./clientTable";
 import RecentTable from "./recentTable";
 import Breadcrumbs from "../../../../../components/Breadcrumbs";
-import { base_url } from "../../../../../base_urls";
+// import { base_url } from "../../../../../base_urls";
 
 const AdminDashboard = () => {
   const [users, setUsers] = useState([]);
 
-  useEffect(() => {
-    axios.get(base_url + "/api/dash.json").then((res) => setUsers(res.data));
-  }, []);
+  // useEffect(() => {
+  //   axios.get(base_url + "http://localhost:3000")
+  //     .then((res) => setUsers(res.data))
+  //     .catch((error) => {
+  //       console.error("There was an error fetching the data!", error);
+  //     });
+  // }, []);
+  
 
   return (
     <div className="main-wrapper">
       <div className="page-wrapper">
         <div className="content container-fluid">
           {/* Page Header */}
-          <Breadcrumbs maintitle="Welcome Admin!" title="Dashboard" />
+          <Breadcrumbs maintitle="Welcome Manager!" title="Dashboard" />
           {/* /Page Header */}
           <div className="row">
             {Array.isArray(users) && users.length > 0 ? (
@@ -43,15 +48,15 @@ const AdminDashboard = () => {
                 </div>
               ))
             ) : (
-              <p>No data available</p>
+              <p></p>
             )}
           </div>
           {/* /Charts */}
           <Charts />
           {/* /Charts */}
-          <Reports />
+          {/* <Reports /> */}
           <Statistics />
-          <div className="row">
+          {/* <div className="row">
             <InvoiceTable />
             <PaymentTable />
           </div>
@@ -59,7 +64,7 @@ const AdminDashboard = () => {
           <div className="row">
             <ClientTable />
             <RecentTable />
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
