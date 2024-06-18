@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-// import axios from "axios";
+import React, {  useEffect,useState } from "react";
+import axios from "axios";
 import Charts from "./charts";
 import Reports from "./Reports";
 import Statistics from "./statistics";
@@ -8,18 +8,18 @@ import PaymentTable from "./paymentTable";
 import ClientTable from "./clientTable";
 import RecentTable from "./recentTable";
 import Breadcrumbs from "../../../../../components/Breadcrumbs";
-// import { base_url } from "../../../../../base_urls";
+import { base_url } from "../../../../../base_urls";
 
 const AdminDashboard = () => {
   const [users, setUsers] = useState([]);
 
-  // useEffect(() => {
-  //   axios.get(base_url + "http://localhost:3000")
-  //     .then((res) => setUsers(res.data))
-  //     .catch((error) => {
-  //       console.error("There was an error fetching the data!", error);
-  //     });
-  // }, []);
+  useEffect(() => {
+    axios.get(base_url + "http://localhost:3000")
+      .then((res) => setUsers(res.data))
+      .catch((error) => {
+        console.error("There was an error fetching the data!", error);
+      });
+  }, []);
   
 
   return (
