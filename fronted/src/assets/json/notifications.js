@@ -26,11 +26,7 @@ const notificationsData = {
       image: Avatar_06,
       // name: " Misty Tison",
       // contents: "added",
-<<<<<<< HEAD
       link: "/contacts",
-=======
-      link: "/low-importance-notification",
->>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
       contents_2:
         "The Fourth of July celebration is in one month. Ensure there are food options for those with allergies and dietary preferences.",
       time: "8 mins ago",
@@ -40,11 +36,7 @@ const notificationsData = {
       image: Avatar_06,
       // name: " Misty Tison",
       // contents: "added",
-<<<<<<< HEAD
       link: "/contacts",
-=======
-      link: "/departments",
->>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
       contents_2:
         "Note! A meeting was arranged with Nicole when she is at home",
       time: "10 mins ago",
@@ -54,11 +46,7 @@ const notificationsData = {
       image: Avatar_06,
       // name: " Misty Tison",
       // contents: "added",
-<<<<<<< HEAD
       link: "#",
-=======
-      link: "/departments",
->>>>>>> 233f9b7364c59c7b2518caca63bab32c846a5dfb
       contents_2:
         "Jacob used over 20 days of sick days in the last quarter. Let him know he has reached his limit.",
       time: "12 mins ago",
