@@ -54,9 +54,12 @@ import UnderManitenance from "../../views/pages/Pages/UnderManitenance";
 import Department from "../../views/pages/Employees/Department";
 import GiftForEmployee from "../../views/pages/Employees/ForEmployee/GiftForEmployee";
 import { SidebarData } from "../../views/layout/sidebardata";
+<<<<<<< HEAD
 import PopUp from "../../views/pages/Employees/PopUp";
 import UserSettings from "../../views/pages/Authentication/UserSettings";
 
+=======
+>>>>>>> a7de5759a9bef78c06b46c0602cbfd7a231c1538
 const ScrollToTop = () => {
   const { pathname } = useLocation();
 
@@ -77,7 +80,10 @@ const AppRouter = () => {
       <Provider store={store}>
         <BrowserRouter basename="/react/template">
           <ScrollToTop />
+<<<<<<< HEAD
           <PopUp/>
+=======
+>>>>>>> a7de5759a9bef78c06b46c0602cbfd7a231c1538
           <Routes>
             <Route path="/" element={<Login />} />
             <Route path="/change-password" element={<ChangePassword />} />
@@ -128,7 +134,10 @@ const AppRouter = () => {
             <Route path="/spinner" element={<Spinner />} />
             <Route path="/*" element={<AppContainer />} />
             <Route path="*" element={<Navigate to="/" />} />
+<<<<<<< HEAD
             <Route path="/settings" element={<UserSettings/>}/>
+=======
+>>>>>>> a7de5759a9bef78c06b46c0602cbfd7a231c1538
             <Route path='/foremployee' element={<GiftForEmployee></GiftForEmployee>}> </Route>
           </Routes>
         </BrowserRouter>

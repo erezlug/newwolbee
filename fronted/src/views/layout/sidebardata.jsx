@@ -78,23 +78,35 @@ export const SidebarData = [
         // style: getMenuItemStyle('Team Dashboard'),
       },
       {
+<<<<<<< HEAD
         menuValue: 'Wallet',
+=======
+        menuValue: 'Personal Dashboard',
+>>>>>>> a7de5759a9bef78c06b46c0602cbfd7a231c1538
         hasSubRoute: false,
         showSubRoute: false,
         route: "/admin-dashboard",
         icon: "la la-dashcube",
         // style: getMenuItemStyle('Personal Dashboard'),
       },
+<<<<<<< HEAD
 
+=======
+>>>>>>> a7de5759a9bef78c06b46c0602cbfd7a231c1538
       {
         menuValue: 'Upcoming events',
         hasSubRoute: false,
         showSubRoute: false,
+<<<<<<< HEAD
         route: "/task-board", 
+=======
+        route: "/task-board",
+>>>>>>> a7de5759a9bef78c06b46c0602cbfd7a231c1538
         icon: "la la-ticket",
         // style: getMenuItemStyle('Upcoming events'),
       },
       {
+<<<<<<< HEAD
         menuValue: 'Notifications',
         hasSubRoute: false,
         showSubRoute: false,
@@ -103,6 +115,8 @@ export const SidebarData = [
         // style: getMenuItemStyle('Upcoming events'),
       },
       {
+=======
+>>>>>>> a7de5759a9bef78c06b46c0602cbfd7a231c1538
         menuValue: '1 X 1',
         hasSubRoute: false,
         showSubRoute: false,
@@ -132,7 +146,10 @@ export const SidebarData = [
         showSubRoute: false,
         route: "/events",
         icon: "la la-calendar",
+<<<<<<< HEAD
     
+=======
+>>>>>>> a7de5759a9bef78c06b46c0602cbfd7a231c1538
         // style: getMenuItemStyle('Calendar'),
       },
       {
@@ -142,6 +159,7 @@ export const SidebarData = [
         route: "#",
         icon: "la la-calendar-plus",
         // style: getMenuItemStyle('Calendar'),
+<<<<<<< HEAD
       },
       {
         menuValue: 'Retention Statistics',
@@ -156,6 +174,11 @@ export const SidebarData = [
   },
 
   
+=======
+      }
+    ],
+  },
+>>>>>>> a7de5759a9bef78c06b46c0602cbfd7a231c1538
   // {
   //   tittle: 'MAIN',
   //   showAsTab: false,
@@ -357,7 +380,10 @@ export const SidebarData = [
   //           menuValue: 'Budget Expenses',
   //           route: "/budget-expenses",
   //         },
+<<<<<<< HEAD
 
+=======
+>>>>>>> a7de5759a9bef78c06b46c0602cbfd7a231c1538
   //       ],
   //     },
 
@@ -528,7 +554,10 @@ export const SidebarData = [
   //           icon: "la la-times-circle",
   //         },
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> a7de5759a9bef78c06b46c0602cbfd7a231c1538
   //   ],
   // },
 
@@ -617,7 +646,10 @@ export const SidebarData = [
   //           route: "/company-settings",
   //           icon: "la la-cog",
   //         },
+<<<<<<< HEAD
 
+=======
+>>>>>>> a7de5759a9bef78c06b46c0602cbfd7a231c1538
   //   ],
   // },
   // {
@@ -870,7 +902,10 @@ export const SidebarData = [
   //             { menuValue: "Data Table", route: "/data-tables" }
   //           ]
   //         }
+<<<<<<< HEAD
 
+=======
+>>>>>>> a7de5759a9bef78c06b46c0602cbfd7a231c1538
   //   ],
   // },
   // {
@@ -908,5 +943,9 @@ export const SidebarData = [
 
   //   ],
   // },
+<<<<<<< HEAD
   
 ];
+=======
+];
+>>>>>>> a7de5759a9bef78c06b46c0602cbfd7a231c1538

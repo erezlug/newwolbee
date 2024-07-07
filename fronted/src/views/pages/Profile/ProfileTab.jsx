@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> a7de5759a9bef78c06b46c0602cbfd7a231c1538
 import React from "react";
 import { Link } from "react-router-dom";
 import PersonalInformationModelPopup from "../../../components/modelpopup/PersonalInformationModelPopup";
@@ -82,7 +85,11 @@ const ProfileTab = () => {
       <div className="tab-content">
         <div
           id="emp_profile"
+<<<<<<< HEAD
           className="pro-overview tab-pane fade"
+=======
+          className="pro-overview tab-pane fade show active"
+>>>>>>> a7de5759a9bef78c06b46c0602cbfd7a231c1538
         >
           <div className="row">
             <div className="col-md-6 d-flex">
@@ -321,4 +328,8 @@ const ProfileTab = () => {
   );
 };
 
+<<<<<<< HEAD
 export default ProfileTab;
+=======
+export default ProfileTab;
+>>>>>>> a7de5759a9bef78c06b46c0602cbfd7a231c1538

@@ -3,6 +3,7 @@
 
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+<<<<<<< HEAD
 import JohnStatistics from './JohnStatistics'
 import employee1 from "../../../../../imgs/avatar_4.JPG";
 import employee2 from "../../../../../imgs/avatar_5.JPG";
@@ -10,6 +11,8 @@ import employee3 from "../../../../../imgs/avatar_6.JPG";
 import employee4 from "../../../../../imgs/avatar_7.JPG";
 import employee5 from "../../../../../imgs/avatar_8.JPG";
 import employee6 from "../../../../../imgs/avatar_10.JPG";
+=======
+>>>>>>> a7de5759a9bef78c06b46c0602cbfd7a231c1538
 import dismissIcon from '../../../../../imgs/dismissIcon.png';
 import snoozeIcon from '../../../../../imgs/snoozeIcon.png';
 // import employee1 from '../../../../../imgs/avatar_4.jpg';
@@ -24,22 +27,30 @@ import email from '../../../../../imgs/email.png'
 import { TiPin } from "react-icons/ti";
 import nicole from '../../../../../imgs/avatar_4.JPG'
 import jacob from '../../../../../imgs/jacob.jpg'
+<<<<<<< HEAD
 import thankyou from '../../../../../imgs/thankyou.png'
 import showAppreciation from '../../../../../imgs/showAppreciation.jpeg'
 import personalTime from '../../../../../imgs/personalTime.jpeg'
 import additionalTime from '../../../../../imgs/additionalTime.jpeg'
 import family from '../../../../../imgs/family.jpeg'
 import publicR from '../../../../../imgs/publicR.jpeg'
+=======
+
+>>>>>>> a7de5759a9bef78c06b46c0602cbfd7a231c1538
 
 const ContactContents = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [modalContent, setModalContent] = useState(null);
   const [modalOpenTwo, setModalOpenTwo] = useState(false);
+<<<<<<< HEAD
   const [modalOpenThree, setModalOpenThree] = useState(false);
   const [modalContentTwo, setModalContentTwo] = useState(null);
   const [modalContentThree, setModalContentThree] = useState(null);
   const [modalOpenfour, setModalOpenfour] = useState(false);
   const [modalContentfour, setModalContentfour] = useState(null)
+=======
+  const [modalContentTwo, setModalContentTwo] = useState(null);
+>>>>>>> a7de5759a9bef78c06b46c0602cbfd7a231c1538
   const [notifications, setNotifications] = useState([
     {
       id: 1,
@@ -93,6 +104,7 @@ const ContactContents = () => {
       viewed: false,
       dismissed: false,
       image: jacob
+<<<<<<< HEAD
     },
     {
       id: 6,
@@ -124,6 +136,11 @@ const ContactContents = () => {
   const [modalContentYes, setModalContentYes] = useState(null);
 
   //-----------
+=======
+    }
+  ]);
+
+>>>>>>> a7de5759a9bef78c06b46c0602cbfd7a231c1538
 
 
   const [postponedNotifications, setPostponedNotifications] = useState([]);
@@ -163,6 +180,7 @@ const ContactContents = () => {
     setNotificationVisible(!isNotificationVisible);
   };
 
+<<<<<<< HEAD
   const handleClick = () => {
     navigate('/task-board', { state: { fromContact: true } });
   };
@@ -175,6 +193,8 @@ const closeModalfour = () => {
   setModalOpenfour(false);
 };
 
+=======
+>>>>>>> a7de5759a9bef78c06b46c0602cbfd7a231c1538
   const smallprojectCardStyle={
     width: '250px',
     boxSizing: 'border-box',
@@ -189,6 +209,7 @@ const closeModalfour = () => {
     height:'300px'
     
   }
+<<<<<<< HEAD
   const jhonAnswer={
     width: '250px',
     boxSizing: 'border-box',
@@ -219,6 +240,10 @@ const closeModalfour = () => {
 
     
   }
+=======
+
+  
+>>>>>>> a7de5759a9bef78c06b46c0602cbfd7a231c1538
 
   const checkboxStyle = {
     marginRight: "10px"
@@ -252,6 +277,7 @@ const closeModalfour = () => {
     overflow: 'auto', // גלילה אוטומטית במקרה שהתוכן חורג מגודל הדיב
   };
 
+<<<<<<< HEAD
   const jhonimgStyle = {
     width: '80px',
     height: '80px',
@@ -262,6 +288,8 @@ const closeModalfour = () => {
     margin: '10px 0',
   };
   
+=======
+>>>>>>> a7de5759a9bef78c06b46c0602cbfd7a231c1538
   const projectCardStyle = {
     width: '300px',
     boxSizing: 'border-box',
@@ -402,11 +430,14 @@ const closeModalfour = () => {
     setModalContentTwo(notification);
     setModalOpenTwo(true);
   }
+<<<<<<< HEAD
   const openModalThree = (notification) => {
     setModalContentThree(notification);
     setModalOpenThree(true);
   }
 
+=======
+>>>>>>> a7de5759a9bef78c06b46c0602cbfd7a231c1538
 
   const closeModal = () => {
     setModalOpen(false);
@@ -415,6 +446,7 @@ const closeModalfour = () => {
   const closeModalTwo = () => {
     setModalOpenTwo(false);
   };
+<<<<<<< HEAD
   const closeModalThree = () => {
     setModalOpenThree(false);
   };
@@ -438,6 +470,8 @@ const openModalYes = (notification) => {
     setModalOpenYes(false);
   };
 // ----------
+=======
+>>>>>>> a7de5759a9bef78c06b46c0602cbfd7a231c1538
 
   const notificationContainerStyle = {
     display: "flex",
@@ -654,7 +688,11 @@ const openModalYes = (notification) => {
           }}>
          <div style={importanceIndicatorStyle(notification.importance)}>
             {notification.importance}
+<<<<<<< HEAD
             </div>
+=======
+          </div>
+>>>>>>> a7de5759a9bef78c06b46c0602cbfd7a231c1538
           <div onClick={() => {
             if (notification.id === 4) {
               openModal(notification);
@@ -662,11 +700,14 @@ const openModalYes = (notification) => {
             else if (notification.id === 3) {
               openModalTwo(notification);
             }
+<<<<<<< HEAD
             else if (notification.id === 6) {
               openModalThree(notification);
             }
             else if (notification.id === 7){openModalfour(notification) }
             else if(notification.id === 2 ){handleClick()}
+=======
+>>>>>>> a7de5759a9bef78c06b46c0602cbfd7a231c1538
             else {
               markAsViewed(notification.id, notification.link);
             }
@@ -710,6 +751,7 @@ const openModalYes = (notification) => {
           )}
         </div>
       ))}
+<<<<<<< HEAD
 
       {/* Modal for notification John */}
       <div style={rowStyle} >
@@ -967,6 +1009,8 @@ const openModalYes = (notification) => {
       )}
       </div>
 
+=======
+>>>>>>> a7de5759a9bef78c06b46c0602cbfd7a231c1538
       {/* Modal for notification 3 */}
      <div >
       {modalOpenTwo && modalContentTwo && (
@@ -1121,6 +1165,7 @@ leave if needed</h3>
  </div>
         </Modal>
       )}
+<<<<<<< HEAD
 
  {/* {Modal for notification 6}  */}
 
@@ -1266,6 +1311,8 @@ leave if needed</h3>
         </Modal>
       )}
 
+=======
+>>>>>>> a7de5759a9bef78c06b46c0602cbfd7a231c1538
     </div>
   );
 };
