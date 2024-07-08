@@ -7,13 +7,7 @@ import { FaRegBell, FaRegComment } from "react-icons/fa";
 import { useLocation } from "react-router-dom/dist";
 import { useTranslation } from "react-i18next";
 import i18n from "../../i18n";
-<<<<<<< HEAD
 import manager from '../../imgs/managerProfilePic.jpg'
-=======
-
-import manager from '../../imgs/managerProfilePic.jpg';
-
->>>>>>> a7de5759a9bef78c06b46c0602cbfd7a231c1538
 
 const Header = (props) => {
   const initialNotifications = notificationsData.notifications.map(notification => ({
@@ -231,11 +225,7 @@ const Header = (props) => {
             </div>
           </div >
         </li >
-<<<<<<< HEAD
         {/* <li className={`nav-item dropdown ${isOpen ? "show" : ""}`}>
-=======
-        <li className={`nav-item dropdown ${isOpen ? "show" : ""}`}>
->>>>>>> a7de5759a9bef78c06b46c0602cbfd7a231c1538
           <Link to="#" className="dropdown-toggle nav-link" data-bs-toggle="dropdown" onClick={toggleDropdown}>
             <i><FaRegComment /></i> <span className="badge badge-pill">8</span>
           </Link>
@@ -243,13 +233,8 @@ const Header = (props) => {
             <div className="topnav-dropdown-header">
               <span className="notification-title">Messages</span>
               <Link to="#" className="clear-noti"> Clear All </Link>
-<<<<<<< HEAD
             </div> */}
             {/* <div className="noti-content">
-=======
-            </div>
-            <div className="noti-content">
->>>>>>> a7de5759a9bef78c06b46c0602cbfd7a231c1538
               <ul className="notification-list">
                 {datas.map((value, index) => (
                   <li className="notification-message" key={index}>
@@ -271,21 +256,12 @@ const Header = (props) => {
                   </li>
                 ))}
               </ul>
-<<<<<<< HEAD
             </div> */}
             {/* <div className="topnav-dropdown-footer">
               <Link onClick={() => localStorage.setItem("minheight", "true")} to="#">View all Messages</Link>
             </div>
           </div>
         </li> */}
-=======
-            </div>
-            <div className="topnav-dropdown-footer">
-              <Link onClick={() => localStorage.setItem("minheight", "true")} to="#">View all Messages</Link>
-            </div>
-          </div>
-        </li>
->>>>>>> a7de5759a9bef78c06b46c0602cbfd7a231c1538
         <li className="nav-item dropdown has-arrow main-drop">
           <Link to="#" className="dropdown-toggle nav-link" data-bs-toggle="dropdown" onClick={handleProfile}>
             <span className="user-img me-1">
@@ -296,11 +272,7 @@ const Header = (props) => {
           </Link>
           <div className={`dropdown-menu dropdown-menu-end ${profile ? "show" : ""}`}>
             <Link className="dropdown-item" to="/admin-dashboard">My Profile</Link>
-<<<<<<< HEAD
             <Link className="dropdown-item" to="/settings">Settings</Link>
-=======
-            <Link className="dropdown-item" to="#">Settings</Link>
->>>>>>> a7de5759a9bef78c06b46c0602cbfd7a231c1538
             <Link className="dropdown-item" to="/">Logout</Link>
           </div>
         </li>
@@ -311,11 +283,7 @@ const Header = (props) => {
         </Link>
         <div className="dropdown-menu dropdown-menu-end dropdown-menu-right">
           <Link className="dropdown-item" to="/admin-dashboard">My Profile</Link>
-<<<<<<< HEAD
           <Link className="dropdown-item" to="/settings">Settings</Link>
-=======
-          <Link className="dropdown-item" to="#">Settings</Link>
->>>>>>> a7de5759a9bef78c06b46c0602cbfd7a231c1538
           <Link className="dropdown-item" to="/">Logout</Link>
         </div>
       </div>
