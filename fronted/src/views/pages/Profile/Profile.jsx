@@ -4,17 +4,10 @@ import { Link, useParams } from "react-router-dom";
 import ProfileTab from "./ProfileTab";
 import Breadcrumbs from "../../../components/Breadcrumbs";
 import moment from "moment";
-<<<<<<< HEAD
 import lisa from '../../../imgs/avatar_1.JPG'
 import tom from '../../../imgs/avatar_2.JPG'
 import david from '../../../imgs/avatar_3.JPG'
 import nicole from '../../../imgs/avatar_4.JPG'
-=======
-import lisa from '../../../imgs/avatar_1.jpg'
-import tom from '../../../imgs/avatar_2.JPG'
-import david from '../../../imgs/avatar_3.JPG'
-import nicole from '../../../imgs/avatar_4.jpg'
->>>>>>> a7de5759a9bef78c06b46c0602cbfd7a231c1538
 import brad from '../../../imgs/avatar_5.JPG'
 import john from '../../../imgs/avatar_6.JPG'
 import mark from '../../../imgs/avatar_7.JPG'
@@ -35,13 +28,8 @@ const Profile = () => {
     '4': tom,
     '5': david,
     '6': nicole,
-<<<<<<< HEAD
     '7': sofia,
     '8': emma,
-=======
-    '7': emma,
-    '8': sofia,
->>>>>>> a7de5759a9bef78c06b46c0602cbfd7a231c1538
     '9': mark,
     '10': josh,
     '11': justin,
