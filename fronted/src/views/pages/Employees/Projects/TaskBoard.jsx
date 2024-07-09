@@ -1,9 +1,5 @@
-<<<<<<< HEAD
 import React, { useState,useEffect } from "react";
 import { useLocation } from "react-router-dom";
-=======
-import React, { useState } from "react";
->>>>>>> a7de5759a9bef78c06b46c0602cbfd7a231c1538
 import { Link } from "react-router-dom";
 import champ from '../../../../imgs/champions.jpeg'
 import pizza from '../../../../imgs/pizza.png'
@@ -53,17 +49,12 @@ import 'react-datepicker/dist/react-datepicker.css'; // ייבוא עיצוב ה
 import { TiPin } from "react-icons/ti";
 
 const TaskBoard = () => {
-<<<<<<< HEAD
   const [modalIsOpen, setModalIsOpen] = useState(false);
-=======
-  const [modalIsOpen, setModalIsOpen] = useState(true);
->>>>>>> a7de5759a9bef78c06b46c0602cbfd7a231c1538
   const [shavuotModalIsOpen, setShavuotModalIsOpen] = useState(false);
   // const [modalIsOpen, setModalIsOpen] = useState(false);
   const [showDatePicker, setShowDatePicker] = useState(false);
   const [selectedDate, setSelectedDate] = useState(new Date());
 
-<<<<<<< HEAD
   const location = useLocation();
 
 
@@ -87,8 +78,6 @@ const TaskBoard = () => {
   // }, [location.pathname]);
 
 
-=======
->>>>>>> a7de5759a9bef78c06b46c0602cbfd7a231c1538
   const openModal = (e) => {
     if (!e || !e.target.closest('.dropdown')) {
       setModalIsOpen(true);
@@ -379,15 +368,9 @@ Set a time
       <br />
         <div style={rowStyle} >
           
-<<<<<<< HEAD
 <h2>International Pizza Day</h2>
 <p>International Pizza day is coming next month and it is a perfect opportunity to give your team a slice of appreciation</p>
 <br/>
-=======
-        <h2>International Pizza Day</h2>
-<p>International Pizza day is coming next month and it is a perfect opportunity to give your team a slice of appreciation</p>
-<br />
->>>>>>> a7de5759a9bef78c06b46c0602cbfd7a231c1538
 <h4>Useful information</h4>
 <ul style={ulStyle}>
     <li style={liStyle}>
