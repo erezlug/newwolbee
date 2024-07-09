@@ -7,7 +7,7 @@ import moment from "moment";
 import lisa from '../../../imgs/avatar_1.JPG'
 import tom from '../../../imgs/avatar_2.JPG'
 import david from '../../../imgs/avatar_3.JPG'
-import nicole from '../../../imgs/avatar_4.JPG'
+import nicole from '../../../imgs/avatar_4.jPG'
 import brad from '../../../imgs/avatar_5.JPG'
 import john from '../../../imgs/avatar_6.JPG'
 import mark from '../../../imgs/avatar_7.JPG'
