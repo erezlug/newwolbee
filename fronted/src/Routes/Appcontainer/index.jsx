@@ -914,7 +914,7 @@ const AppContainer = () => {
       path: "deals-details",
       element: <DealsDetails />,
     },
-<<<<<<< HEAD
+
 
     {
       id: 132,
@@ -928,8 +928,7 @@ const AppContainer = () => {
     },
 
 
-=======
->>>>>>> a7de5759a9bef78c06b46c0602cbfd7a231c1538
+
   ];
 
   const ChatRoutingeObjects = [
