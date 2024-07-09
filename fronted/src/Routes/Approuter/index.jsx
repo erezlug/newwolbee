@@ -75,7 +75,7 @@ const AppRouter = () => {
   return (
     <div>
       <Provider store={store}>
-        <BrowserRouter basename="/react/template">
+        <BrowserRouter >
           <ScrollToTop />
           <PopUp/>
           <Routes>
