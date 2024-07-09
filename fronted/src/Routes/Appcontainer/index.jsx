@@ -196,11 +196,11 @@ import RecentFiles from "../../views/pages/MainPages/Apps/FileManager/recentFile
 import EmailContent from "../../views/pages/MainPages/Apps/Email/emailContent.jsx";
 import EmailView from "../../views/pages/MainPages/Apps/Email/emailView.jsx";
 import DealsDetails from "../../views/pages/Crm/DealsDetails.jsx";
-<<<<<<< HEAD
+
 import RetentionStatistics from "../../views/pages/MainPages/Dashboard/AdminDashboard/RetentionStatistics.jsx";
 import GiftForEmployee from "../../views/pages/Employees/ForEmployee/GiftForEmployee.jsx";
-=======
->>>>>>> a7de5759a9bef78c06b46c0602cbfd7a231c1538
+
+
 
 const AppContainer = () => {
   useEffect(() => {
