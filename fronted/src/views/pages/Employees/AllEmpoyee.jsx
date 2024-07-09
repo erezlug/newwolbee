@@ -41,7 +41,7 @@ const AllEmployee = () => {
     const manager = localStorage.getItem('credencial');
     const currentLoggedInManager = JSON.parse(manager);
 
-    fetch('https://wolbee-mvp-2.onrender.com/findemployees', {
+    fetch('http://localhost:5000/findemployees', {
       headers: {
         'Accept': 'application/json', 
         'Content-Type': 'application/json'
