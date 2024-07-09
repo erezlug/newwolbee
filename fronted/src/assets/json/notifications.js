@@ -55,8 +55,7 @@ const notificationsData = {
 };
 
 // Export the variable as the default export
-<<<<<<< HEAD
+
 export default notificationsData
-=======
-export default notificationsData
->>>>>>> a7de5759a9bef78c06b46c0602cbfd7a231c1538
+
+
