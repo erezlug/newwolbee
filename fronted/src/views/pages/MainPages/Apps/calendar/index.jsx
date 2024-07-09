@@ -8,27 +8,15 @@ import axios from "axios";
 import CalendarModal from "../../../../../components/modelpopup/CalendarModal";
 import { useLocation } from "react-router-dom";
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> a7de5759a9bef78c06b46c0602cbfd7a231c1538
 const Calendar = (props) => {
   const [events, setEvents] = useState([]);
   const location = useLocation();
   const linkRef = useRef(null);
   const eventName = location.state?.eventName;
-<<<<<<< HEAD
   const openModal = location.state?.openModal;
   console.log('Location state:', location.state); // הדפס את ערך ה-state של המיקום
   console.log('Event name:', eventName); // הדפס את שם האירוע
 
-=======
-  console.log('Location state:', location.state); // הדפס את ערך ה-state של המיקום
-  console.log('Event name:', eventName); // הדפס את שם האירוע
-
-
->>>>>>> a7de5759a9bef78c06b46c0602cbfd7a231c1538
   useEffect(() => {
     const fetchEvents = async () => {
       try {
@@ -73,7 +61,6 @@ const Calendar = (props) => {
       className: "bg-info",
     },
   ];
-<<<<<<< HEAD
 
   useEffect(() => {
     if (openModal && linkRef.current) {
@@ -81,13 +68,6 @@ const Calendar = (props) => {
     }
   }, [openModal]);
 
-=======
-  useEffect(() => {
-    if (linkRef.current) {
-      linkRef.current.click();
-    }
-  }, []);
->>>>>>> a7de5759a9bef78c06b46c0602cbfd7a231c1538
   return (
     <div className="page-wrapper">
       <div className="content container-fluid">
@@ -95,11 +75,7 @@ const Calendar = (props) => {
         <div className="page-header">
           <div className="row align-items-center">
             <div className="col">
-<<<<<<< HEAD
               <h3 className="page-title">Calendar</h3>
-=======
-              <h3 className="page-title">Calender</h3>
->>>>>>> a7de5759a9bef78c06b46c0602cbfd7a231c1538
               <ul className="breadcrumb">
                 {/* <li className="breadcrumb-item">
                   <Link to="admin-dashboard">Dashboard</Link>
@@ -108,7 +84,6 @@ const Calendar = (props) => {
               </ul>
             </div>
             <div className="col-auto float-end ms-auto">
-<<<<<<< HEAD
               <Link
                 to="#"
                 className="btn add-btn"
@@ -118,17 +93,6 @@ const Calendar = (props) => {
               >
                 <i className="fa-solid fa-plus" /> Add Event
               </Link>
-=======
-            <Link
-  to="#"
-  className="btn add-btn"
-  data-bs-toggle="modal"
-  data-bs-target="#add_event"
-  ref={linkRef}
->
-  <i className="fa-solid fa-plus" /> Add Event
-</Link>
->>>>>>> a7de5759a9bef78c06b46c0602cbfd7a231c1538
             </div>
           </div>
         </div>
@@ -170,17 +134,9 @@ const Calendar = (props) => {
         </div>
       </div>
 
-<<<<<<< HEAD
       <CalendarModal addEvent={addEvent} />
-=======
-      <CalendarModal addEvent={addEvent}  />
->>>>>>> a7de5759a9bef78c06b46c0602cbfd7a231c1538
     </div>
   );
 };
 
-<<<<<<< HEAD
 export default Calendar;
-=======
-export default Calendar;
->>>>>>> a7de5759a9bef78c06b46c0602cbfd7a231c1538
