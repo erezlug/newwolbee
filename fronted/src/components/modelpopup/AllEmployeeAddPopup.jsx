@@ -7,14 +7,9 @@ import axios from "axios";
 import { useForm, Controller } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-<<<<<<< HEAD
 import ProjectDetails from "../../views/pages/Profile/ProfileContent";
 
 const AllEmployeeAddPopup = (props) => {
-=======
-
-const AllEmployeeAddPopup = () => {
->>>>>>> a7de5759a9bef78c06b46c0602cbfd7a231c1538
   const employee = [
     { value: 1, label: "Select Department" },
     { value: 2, label: "Web Development" },
@@ -704,20 +699,11 @@ const AllEmployeeAddPopup = () => {
                                 height: '40px',
                                 border: 'none',
                                 borderRadius: '5px',
-<<<<<<< HEAD
                                 background: isAddActivityBtnHovered ?
                                   '#e3a31d' : 'linear-gradient(to right, #FF902F 0%, #FC6075 100%)',
                                 color: 'white',
                                 transition: 'color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out',
                                 fontSize: '15px'
-=======
-
-                                background: isAddActivityBtnHovered ?
-                                  '#e3a31d' : 'linear-gradient(to right, #FF902F 0%, #FC6075 100%)',
-                                color: 'white',
-
-                                
->>>>>>> a7de5759a9bef78c06b46c0602cbfd7a231c1538
                               }}>
                               Add activity
                             </button>
@@ -860,23 +846,12 @@ const AllEmployeeAddPopup = () => {
                                 height: '40px',
                                 borderRadius: '5px',
                                 border: 'none',
-<<<<<<< HEAD
                                 background: isAddSingerBtnHovered ? '#e3a31d' :
                                   'linear-gradient(to right, #FF902F 0%, #FC6075 100%)',
                                 fontSize: '15px',
                                 transition: 'color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out',
                                 fontSize: '15px',
                                 color: 'white'
-=======
-
-                                
-                                backgroundColor: isAddSingerBtnHovered ? '#e3a31d' :
-                                  '#FEB723',
-                                fontSize: '15px',
-                                transition: 'color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out',
-                                fontSize: '15px'
- 
->>>>>>> a7de5759a9bef78c06b46c0602cbfd7a231c1538
                               }}>
                               Add singer</button>
                             <div className="col-sm-2">
@@ -981,20 +956,11 @@ const AllEmployeeAddPopup = () => {
                                 height: '40px',
                                 borderRadius: '5px',
                                 border: 'none',
-<<<<<<< HEAD
-=======
-
->>>>>>> a7de5759a9bef78c06b46c0602cbfd7a231c1538
                                 background: isAddFoodAndDrinkBtnHovered ? '#e3a31d' :
                                   'linear-gradient(to right, #FF902F 0%, #FC6075 100%)',
                                 fontSize: '15px',
                                 color: 'white',
-<<<<<<< HEAD
                                 transition: 'color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out',
-=======
-
-                               
->>>>>>> a7de5759a9bef78c06b46c0602cbfd7a231c1538
                               }}>
                               Add food & drink</button>
                             <div className="col-sm-2">
@@ -1080,20 +1046,11 @@ const AllEmployeeAddPopup = () => {
                                 height: '40px',
                                 borderRadius: '5px',
                                 border: 'none',
-<<<<<<< HEAD
-=======
-
->>>>>>> a7de5759a9bef78c06b46c0602cbfd7a231c1538
                                 background: isAddRestaurantBtnHovered ? '#e3a31d' :
                                   'linear-gradient(to right, #FF902F 0%, #FC6075 100%)',
                                 fontSize: '15px',
                                 color: 'white',
-<<<<<<< HEAD
                                 transition: 'color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out',
-=======
-
-                               
->>>>>>> a7de5759a9bef78c06b46c0602cbfd7a231c1538
                               }}
                             >Add restaurant
                             </button>
@@ -1199,20 +1156,11 @@ const AllEmployeeAddPopup = () => {
                                 height: '40px',
                                 border: 'none',
                                 borderRadius: '5px',
-<<<<<<< HEAD
                                 background: isAddHobbyBtnHovered ?
                                   '#e3a31d' : 'linear-gradient(to right, #FF902F 0%, #FC6075 100%)',
                                 color: 'white',
                                 transition: 'color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out',
                                 fontSize: '15px'
-=======
-
-                                background: isAddHobbyBtnHovered ?
-                                  '#e3a31d' : 'linear-gradient(to right, #FF902F 0%, #FC6075 100%)',
-                                color: 'white',
-
-                               
->>>>>>> a7de5759a9bef78c06b46c0602cbfd7a231c1538
                               }}>
                               Add hobby
                             </button>
@@ -2291,10 +2239,7 @@ const AllEmployeeAddPopup = () => {
             </div>
           </div>
         </div>
-<<<<<<< HEAD
         <ProjectDetails></ProjectDetails>
-=======
->>>>>>> a7de5759a9bef78c06b46c0602cbfd7a231c1538
       </div>
     </>
   );
