@@ -1,200 +1,254 @@
+// const getMenuItemStyle = (menuValue) => {
+//   const restrictedItems = ['1 X 1', 'To do List', 'Useful information', 'Create new event'];
+//   if (restrictedItems.includes(menuValue)) {
+//     return { cursor: 'not-allowed' };
+//   }
+//   return {};
+// };
 
 export const SidebarData = [
-
-{
-    tittle: 'EMPLOYEES',
+  {
+    tittle: 'Main menu',
     showAsTab: false,
     separateRoute: false,
     menu: [
+      // {
+      //   menuValue: 'Employees',
+      //   hasSubRoute: true,
+      //   showSubRoute: false,
+      //   route: "#",
+      //   icon: "la la-user",
+      //   subMenus: [
+      //     {
+      //       menuValue: 'Team dashboard',
+      //       route: "/employees",
+      //     },
+      //     {
+      //       menuValue: 'Holidays',
+      //       route: "/holidays",
+      //     },
+      //     {
+      //       menuValue: 'Leaves(Admin)',
+      //       route: "/adminleaves",
+      //     },
+      //     {
+      //       menuValue: 'Leaves(Employee)',
+      //       route: "/leaves-employee",
+      //     },
+      //     {
+      //       menuValue: 'Leave Settings',
+      //       route: "/leave-settings",
+      //     },
+      //     {
+      //       menuValue: 'Attendance (Admin)',
+      //       route: "/adminattendance",
+      //     },
+      //     {
+      //       menuValue: 'Attendance (Employee)',
+      //       route: "/attendance-employee",
+      //     },
+      //     {
+      //       menuValue: 'Departments',
+      //       route: "/departments",
+      //     },
+      //     {
+      //       menuValue: 'Designations',
+      //       route: "/designations",
+      //     },
+      //     {
+      //       menuValue: 'Timesheet',
+      //       route: "/timesheet",
+      //     },
+      //     {
+      //       menuValue: 'Shift & Schedule',
+      //       route: "/shift-scheduling",
+      //     },
+      //     {
+      //       menuValue: 'Overtime',
+      //       route: "/overtime",
+      //     },
+      //   ],
+      // },  
       {
-        menuValue: 'Employees',
-        hasSubRoute: true,
-        showSubRoute: false,
-        route: "#",
-        icon: "la la-user",
-        subMenus: [
-          {
-            menuValue: 'All Employees',
-            route: "/employees",
-          },
-          {
-            menuValue: 'Holidays',
-            route: "/holidays",
-          },
-          {
-            menuValue: 'Leaves(Admin)',
-            route: "/adminleaves",
-          },
-          {
-            menuValue: 'Leaves(Employee)',
-            route: "/leaves-employee",
-          },
-          {
-            menuValue: 'Leave Settings',
-            route: "/leave-settings",
-          },
-          {
-            menuValue: 'Attendance (Admin)',
-            route: "/adminattendance",
-          },
-          {
-            menuValue: 'Attendance (Employee)',
-            route: "/attendance-employee",
-          },
-          {
-            menuValue: 'Departments',
-            route: "/departments",
-          },
-          {
-            menuValue: 'Designations',
-            route: "/designations",
-          },
-          {
-            menuValue: 'Timesheet',
-            route: "/timesheet",
-          },
-          {
-            menuValue: 'Shift & Schedule',
-            route: "/shift-scheduling",
-          },
-          {
-            menuValue: 'Overtime',
-            route: "/overtime",
-          },
-        ],
-      },
+    menuValue: "My Dashboard",
+    hasSubRoute: false,
+    showSubRoute: false,
+    route: "/myDashboard",
+    icon: "la la-user",
+    // style: getMenuItemStyle('Team Dashboard'),
+      },
       {
-        menuValue: 'Clients',
+        menuValue: 'Team Dashboard',
         hasSubRoute: false,
         showSubRoute: false,
-        route: "/clients",
+        route: "/employees",
         icon: "la la-users",
-      },
-    
-      {
-        menuValue: 'Projects',
-        hasSubRoute: true,
-        showSubRoute: false,
-        icon: "la la-rocket",
-        subMenus: [
-          {
-            menuValue: 'gifts',
-            route: "/projects",
-          },
-          {
-            menuValue: 'Tasks',
-            route: "/tasks",
-          },
-          {
-            menuValue: 'close events',
-            route: "/task-board",
-          },
-        ],
+        // style: getMenuItemStyle('Team Dashboard'),
       },
       {
-        menuValue: 'Tickets',
-        hasSubRoute: true,
+        menuValue: 'Wallet',
+        hasSubRoute: false,
         showSubRoute: false,
-        icon: "la la-ticket",
-        subMenus: [
-          {
-            menuValue: 'Tickets',
-            route: "/tickets",
-          },
-          {
-            menuValue: 'Ticket Details',
-            route: "/ticket-details",
-          },
-        
-        ],
-      },
-    ],
-  },
-{
-    tittle: 'MAIN',
-    showAsTab: false,
-    separateRoute: false,
-    menu: [
-      {
-        menuValue: 'Dashboard',
-        hasSubRoute: true,
-        showSubRoute: false,
-        route: "#",
+        route: "/admin-dashboard",
         icon: "la la-dashcube",
-        subMenus: [
-          {
-            menuValue: 'Admin Dashboard',
-            route: "/admin-dashboard",
-          },
-          {
-            menuValue: 'Employee Dashboard',
-            route: "/employee-dashboard",
-          },
-          {
-            menuValue: 'Deals Dashboard',
-            route: "/deals-dashboard",
-          },
-          {
-            menuValue: 'Leads Dashboard',
-            route: "/leads-dashboard",
-          },
-        ],
+        // style: getMenuItemStyle('Personal Dashboard'),
+      },
+
+      {
+        menuValue: 'Upcoming events',
+        hasSubRoute: false,
+        showSubRoute: false,
+        route: "/task-board", 
+        icon: "la la-ticket",
+        // style: getMenuItemStyle('Upcoming events'),
       },
       {
-        menuValue: 'Apps',
-        hasSubRoute: true,
+        menuValue: 'Notifications',
+        hasSubRoute: false,
+        showSubRoute: false,
+        route: "/contacts",
+        icon: "las la-bell",
+        // style: getMenuItemStyle('Upcoming events'),
+      },
+      {
+        menuValue: '1 X 1',
+        hasSubRoute: false,
         showSubRoute: false,
         route: "#",
-        icon: "la la-cube",
-        subMenus: [
-          {
-            menuValue: 'Chats',
-            route: "/chat",
-          },
-          {
-            menuValue: 'Calls',
-            route: "#",
-            showMenuRoute: true,
-            subMenusValues: [
-                {
-                    menuValue: 'Voice Call',
-                    route: "/voice-call",
-                  },
-                {
-                    menuValue: 'Video Call',
-                    route: "/video-call",
-                  },
-                {
-                    menuValue: 'Outgoing Call',
-                    route: "/outgoing-call",
-                  },
-                {
-                    menuValue: 'Incoming Call',
-                    route: "/incoming-call",
-                  },
-            ]
-          },
-          {
-            menuValue: 'Calendar',
-            route: "/events",
-          },
-          {
-            menuValue: 'Notifications',
-            route: "/contacts",
-          },
-          {
-            menuValue: 'Email',
-            route: "/inbox",
-          },
-          {
-            menuValue: 'File Manager',
-            route: "/file-manager",
-          },
-        ],
+        icon: "la la-user-friends",
+        // style: getMenuItemStyle('1 X 1'),
       },
+      {
+        menuValue: 'To do List',
+        hasSubRoute: false,
+        showSubRoute: false,
+        route: "#",
+        icon: "la la-list",
+        // style: getMenuItemStyle('To do List'),
+      },
+      {
+        menuValue: 'Useful information',
+        hasSubRoute: false,
+        showSubRoute: false,
+        route: "#",
+        icon: "la la-info",
+        // style: getMenuItemStyle('Useful information'),
+      },
+      {
+        menuValue: 'Calendar',
+        hasSubRoute: false,
+        showSubRoute: false,
+        route: "/events",
+        icon: "la la-calendar",
+    
+        // style: getMenuItemStyle('Calendar'),
+      },
+      {
+        menuValue: 'Create new event',
+        hasSubRoute: false,
+        showSubRoute: false,
+        route: "#",
+        icon: "la la-calendar-plus",
+        // style: getMenuItemStyle('Calendar'),
+      },
+      {
+        menuValue: 'Retention Statistics',
+        hasSubRoute: false,
+        showSubRoute: false,
+        route: "RetentionStatistics",
+        icon: "la la-bar-chart",
+        // style: getMenuItemStyle('Calendar'),
+      },
+
+
     ],
   },
+
   
+  // {
+  //   tittle: 'MAIN',
+  //   showAsTab: false,
+  //   separateRoute: false,
+  //   menu: [
+  //     {
+  //       menuValue: 'Dashboard',
+  //       hasSubRoute: true,
+  //       showSubRoute: false,
+  //       route: "#",
+  //       icon: "la la-dashcube",
+  //       subMenus: [
+  //         {
+  //           menuValue: 'Personal dashboard',
+  //           route: "/admin-dashboard",
+  //         },
+  //         {
+  //           menuValue: 'Employee Dashboard',
+  //           route: "/employee-dashboard",
+  //         },
+  //         {
+  //           menuValue: 'Deals Dashboard',
+  //           route: "/deals-dashboard",
+  //         },
+  //         {
+  //           menuValue: 'Leads Dashboard',
+  //           route: "/leads-dashboard",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       menuValue: 'Apps',
+  //       hasSubRoute: true,
+  //       showSubRoute: false,
+  //       route: "#",
+  //       icon: "la la-cube",
+  //       subMenus: [
+  //         {
+  //           menuValue: 'Chats',
+  //           route: "/chat",
+  //         },
+  //         {
+  //           menuValue: 'Calls',
+  //           route: "#",
+  //           showMenuRoute: true,
+  //           subMenusValues: [
+  //             {
+  //               menuValue: 'Voice Call',
+  //               route: "/voice-call",
+  //             },
+  //             {
+  //               menuValue: 'Video Call',
+  //               route: "/video-call",
+  //             },
+  //             {
+  //               menuValue: 'Outgoing Call',
+  //               route: "/outgoing-call",
+  //             },
+  //             {
+  //               menuValue: 'Incoming Call',
+  //               route: "/incoming-call",
+  //             },
+  //           ]
+  //         },
+  //         {
+  //           menuValue: 'Calendar',
+  //           route: "/events",
+  //         },
+  //         {
+  //           menuValue: 'Notifications',
+  //           route: "/contacts",
+  //         },
+  //         {
+  //           menuValue: 'Email',
+  //           route: "/inbox",
+  //         },
+  //         {
+  //           menuValue: 'File Manager',
+  //           route: "/file-manager",
+  //         },
+  //       ],
+  //     },
+  //   ],
+  // },
   // {
   //   tittle: 'CRM',
   //   showAsTab: false,
@@ -256,8 +310,8 @@ export const SidebarData = [
   //   showAsTab: false,
   //   separateRoute: false,
   //   menu: [
-    
-    
+
+
   //     {
   //       menuValue: 'Sales',
   //       hasSubRoute: true,
@@ -312,7 +366,7 @@ export const SidebarData = [
   //           menuValue: 'Budget Expenses',
   //           route: "/budget-expenses",
   //         },
-         
+
   //       ],
   //     },
 
@@ -334,8 +388,8 @@ export const SidebarData = [
   //           menuValue: 'Payroll Items',
   //           route: "/payroll-items",
   //         },
-         
-         
+
+
   //       ],
   //     },
   //     {
@@ -483,7 +537,7 @@ export const SidebarData = [
   //           icon: "la la-times-circle",
   //         },
 
-          
+
   //   ],
   // },
 
@@ -572,7 +626,7 @@ export const SidebarData = [
   //           route: "/company-settings",
   //           icon: "la la-cog",
   //         },
-      
+
   //   ],
   // },
   // {
@@ -696,13 +750,13 @@ export const SidebarData = [
   //             }
   //           ]
   //         }
-          
+
   //   ],
   // },
- 
- 
-  
- 
+
+
+
+
   // {
   //   tittle: 'UI INTERFACE',
   //   showAsTab: false,
@@ -825,7 +879,7 @@ export const SidebarData = [
   //             { menuValue: "Data Table", route: "/data-tables" }
   //           ]
   //         }
-          
+
   //   ],
   // },
   // {
@@ -856,11 +910,12 @@ export const SidebarData = [
   //       icon: "la la-share-alt",
   //       subMenus: [
   //         { menuValue: "Level 1", route: "#" },
-         
+
   //       ]
   //     },
-     
-    
-  //   ],
-  // },
+
+
+  //   ],
+  // },
+  
 ];

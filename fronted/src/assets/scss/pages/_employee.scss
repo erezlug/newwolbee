@@ -31,8 +31,8 @@
     }
 }
 .add-btn {
-    background-color: $primary;
-    border: 1px solid $primary;
+    background: linear-gradient(to right, #FF902F 0%, #FC6075 100%);
+    // border: 1px solid $primary;
     color: $white;
     float: right;
     font-weight: $font-weight-medium;

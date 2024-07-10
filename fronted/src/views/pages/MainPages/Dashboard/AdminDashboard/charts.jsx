@@ -14,22 +14,22 @@ import {
 // import "../../../../../assets/css/index.css";
 
 const barchartdata = [
-  { y: "2006", "Total Income": 100, "Total Outcome": 90 },
-  { y: "2007", "Total Income": 75, "Total Outcome": 65 },
-  { y: "2008", "Total Income": 50, "Total Outcome": 40 },
-  { y: "2009", "Total Income": 75, "Total Outcome": 65 },
-  { y: "2010", "Total Income": 50, "Total Outcome": 40 },
-  { y: "2011", "Total Income": 75, "Total Outcome": 65 },
-  { y: "2012", "Total Income": 100, "Total Outcome": 90 },
+  { y: "2017", "Budget": 100, "Usage": 90 },
+  { y: "2018", "Budget": 75, "Usage": 65 },
+  { y: "2019", "Budget": 50, "Usage": 40 },
+  { y: "2020", "Budget": 75, "Usage": 65 },
+  { y: "2021", "Budget": 50, "Usage": 40 },
+  { y: "2022", "Budget": 75, "Usage": 65 },
+  { y: "2023", "Budget": 100, "Usage": 90 },
 ];
 const linechartdata = [
-  { y: "2006", "Total Sales": 50, "Total Revenue": 90 },
-  { y: "2007", "Total Sales": 75, "Total Revenue": 65 },
-  { y: "2008", "Total Sales": 50, "Total Revenue": 40 },
-  { y: "2009", "Total Sales": 75, "Total Revenue": 65 },
-  { y: "2010", "Total Sales": 50, "Total Revenue": 40 },
-  { y: "2011", "Total Sales": 75, "Total Revenue": 65 },
-  { y: "2012", "Total Sales": 100, "Total Revenue": 50 },
+  { y: "Jan", "Budget": 800, "Total Revenue": 90 },
+  { y: "Feb", "Budget": 1200, "Total Revenue": 65 },
+  { y: "March", "Budget": 1100, "Total Revenue": 40 },
+  { y: "April", "Budget": 2000, "Total Revenue": 65 },
+  { y: "May", "Budget": 1200, "Total Revenue": 40 },
+  { y: "June", "Budget": 900, "Total Revenue": 65 },
+  { y: "July", "Budget": 1500, "Total Revenue": 50 },
 ];
 
 const Charts = () => {
@@ -41,7 +41,7 @@ const Charts = () => {
             <div className="col-md-6 text-center">
               <div className="card">
                 <div className="card-body">
-                  <h3 className="card-title">Total Revenue</h3>
+                  <h3 className="card-title">Annual Budget Usage Analysis</h3>
                   <ResponsiveContainer width="100%" height={300}>
                     <BarChart
                       data={barchartdata}
@@ -57,8 +57,8 @@ const Charts = () => {
                       <YAxis />
                       <Tooltip />
                       <Legend />
-                      <Bar dataKey="Total Income" fill="#ff9b44" />
-                      <Bar dataKey="Total Outcome" fill="#fc6075" />
+                      <Bar dataKey="Budget" fill="#ff9b44" />
+                      <Bar dataKey="Usage" fill="#fc6075" />
                     </BarChart>
                   </ResponsiveContainer>
                 </div>
@@ -67,7 +67,7 @@ const Charts = () => {
             <div className="col-md-6 text-center">
               <div className="card">
                 <div className="card-body">
-                  <h3 className="card-title">Sales Overview</h3>
+                  <h3 className="card-title">Monthly Budget Allocation</h3>
                   <ResponsiveContainer width="100%" height={300}>
                     <LineChart
                       data={linechartdata}
@@ -75,23 +75,14 @@ const Charts = () => {
                     >
                       <CartesianGrid />
                       <XAxis dataKey="y" />
-                      <YAxis />
+                      <YAxis domain={[0, 'dataMax + 500']} allowDataOverflow={true} />
                       <Tooltip />
-                      <Legend />
+                      {/* <Legend /> */}
                       <Line
                         type="monotone"
-                        dataKey="Total Sales"
+                        dataKey="Budget"
                         stroke="#ff9b44"
                         fill="#00c5fb"
-                        strokeWidth={3}
-                        dot={{ r: 3 }}
-                        activeDot={{ r: 7 }}
-                      />
-                      <Line
-                        type="monotone"
-                        dataKey="Total Revenue"
-                        stroke="#fc6075"
-                        fill="#0253cc"
                         strokeWidth={3}
                         dot={{ r: 3 }}
                         activeDot={{ r: 7 }}

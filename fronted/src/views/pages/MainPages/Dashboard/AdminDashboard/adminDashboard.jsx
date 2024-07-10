@@ -14,7 +14,12 @@ const AdminDashboard = () => {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    axios.get(base_url + "/api/dash.json").then((res) => setUsers(res.data));
+    axios
+      .get(base_url + "http://localhost:3000")
+      .then((res) => setUsers(res.data))
+      .catch((error) => {
+        console.error("There was an error fetching the data!", error);
+      });
   }, []);
 
   return (
@@ -22,7 +27,7 @@ const AdminDashboard = () => {
       <div className="page-wrapper">
         <div className="content container-fluid">
           {/* Page Header */}
-          <Breadcrumbs maintitle="Welcome Admin!" title="Dashboard" />
+          <Breadcrumbs maintitle="Wallet!" title="Dashboard"/>
           {/* /Page Header */}
           <div className="row">
             {Array.isArray(users) && users.length > 0 ? (
@@ -43,23 +48,11 @@ const AdminDashboard = () => {
                 </div>
               ))
             ) : (
-              <p>No data available</p>
+              <p></p>
             )}
           </div>
-          {/* /Charts */}
-          <Charts />
-          {/* /Charts */}
-          <Reports />
           <Statistics />
-          <div className="row">
-            <InvoiceTable />
-            <PaymentTable />
-          </div>
-
-          <div className="row">
-            <ClientTable />
-            <RecentTable />
-          </div>
+          <Charts />
         </div>
       </div>
     </div>

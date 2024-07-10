@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Link } from "react-router-dom";
 import PersonalInformationModelPopup from "../../../components/modelpopup/PersonalInformationModelPopup";
@@ -81,7 +82,7 @@ const ProfileTab = () => {
       <div className="tab-content">
         <div
           id="emp_profile"
-          className="pro-overview tab-pane fade show active"
+          className="pro-overview tab-pane fade"
         >
           <div className="row">
             <div className="col-md-6 d-flex">

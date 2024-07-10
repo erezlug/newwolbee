@@ -197,6 +197,11 @@ import EmailContent from "../../views/pages/MainPages/Apps/Email/emailContent.js
 import EmailView from "../../views/pages/MainPages/Apps/Email/emailView.jsx";
 import DealsDetails from "../../views/pages/Crm/DealsDetails.jsx";
 
+import RetentionStatistics from "../../views/pages/MainPages/Dashboard/AdminDashboard/RetentionStatistics.jsx";
+import GiftForEmployee from "../../views/pages/Employees/ForEmployee/GiftForEmployee.jsx";
+
+
+
 const AppContainer = () => {
   useEffect(() => {
     localStorage.setItem("colorschema", "orange");
@@ -909,6 +914,21 @@ const AppContainer = () => {
       path: "deals-details",
       element: <DealsDetails />,
     },
+
+
+    {
+      id: 132,
+      path: "RetentionStatistics",
+      element: <RetentionStatistics/>,
+    },
+    {
+      id: 133,
+      path: "foremployee",
+      element: <GiftForEmployee/>,
+    },
+
+
+
   ];
 
   const ChatRoutingeObjects = [

@@ -45,7 +45,7 @@ const Login = () => {
 
   const onSubmit = async (data) => {
     try {
-      const response = await fetch('https://wolbee-mvp-2.onrender.com/login', {
+      const response = await fetch('http://localhost:5000/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -63,7 +63,7 @@ const Login = () => {
         };
         dispatch(login(Value));
         localStorage.setItem("credencial", JSON.stringify(Value));
-        navigate("/employees");
+        navigate("/myDashboard");
         resetFunctionwithlogin();
       } else {
         setEmailError(true);
@@ -74,11 +74,11 @@ const Login = () => {
     }
   };
 
-  useEffect(() => {
-    checkCurrentId();
-    setValue("email", localStorage.getItem("email"));
-    setValue("password", localStorage.getItem("password"));
-  }, []);
+  // useEffect(() => {
+  //   checkCurrentId();
+  //   setValue("email", localStorage.getItem("email"));
+  //   setValue("password", localStorage.getItem("password"));
+  // }, []);
 
   const checkCurrentId = () => {
     const storedId = localStorage.getItem("currentId");
@@ -97,13 +97,13 @@ const Login = () => {
 
         <div className="main-wrapper">
           <div className="account-content">
-            <Link to="/job-list" className="btn btn-primary apply-btn">
-              Apply Job
-            </Link>
+            {/* <Link to="/job-list" className="btn btn-primary apply-btn"> */}
+              {/* Apply Job */}
+            {/* </Link> */}
             <div className="container">
               {/* Account Logo */}
               <div className="account-logo">
-                <Link to="/admin-dashboard">
+                <Link to="#">
                   <img src={Applogo} alt="Dreamguy's Technologies" style={{width:'200px'}} />
                 </Link>
               </div>

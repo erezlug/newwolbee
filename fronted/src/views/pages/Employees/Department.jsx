@@ -155,13 +155,13 @@ special</h4>
                     className="dropdown-item"
                     onClick={() => handleOption("in3Days")}
                   >
-                    Postpone in 3 days
+                    Postpone for 3 days
                   </button>
                   <button
                     className="dropdown-item"
                     onClick={() => handleOption("in1Week")}
                   >
-Postpone a week
+Postpone for a week
                   </button>
                   <button
                     className="dropdown-item"
@@ -214,13 +214,13 @@ her that you care</h4>
                     className="dropdown-item"
                     onClick={() => handleOption("in3Days")}
                   >
-                    Postpone in 3 days
+                    Postpone for 3 days
                   </button>
                   <button
                     className="dropdown-item"
                     onClick={() => handleOption("in1Week")}
                   >
-Postpone a week
+Postpone for a week
                   </button>
                   <button
                     className="dropdown-item"
@@ -271,13 +271,13 @@ Set a time
                     className="dropdown-item"
                     onClick={() => handleOption("in3Days")}
                   >
-                    Postpone in 3 days
+                    Postpone for 3 days
                   </button>
                   <button
                     className="dropdown-item"
                     onClick={() => handleOption("in1Week")}
                   >
-Postpone a week
+Postpone for a week
                   </button>
                   <button
                     className="dropdown-item"
@@ -332,13 +332,13 @@ birthday</h4>
                     className="dropdown-item"
                     onClick={() => handleOption("in3Days")}
                   >
-                    Postpone in 3 days
+                    Postpone for 3 days
                   </button>
                   <button
                     className="dropdown-item"
                     onClick={() => handleOption("in1Week")}
                   >
-Postpone a week
+Postpone for a week
                   </button>
                   <button
                     className="dropdown-item"
@@ -393,13 +393,13 @@ personal touch</h4>
                     className="dropdown-item"
                     onClick={() => handleOption("in3Days")}
                   >
-                    Postpone in 3 days
+                    Postpone for 3 days
                   </button>
                   <button
                     className="dropdown-item"
                     onClick={() => handleOption("in1Week")}
                   >
-Postpone a week
+Postpone for a week
                   </button>
                   <button
                     className="dropdown-item"
@@ -452,13 +452,13 @@ you don’t miss it</h4>
                     className="dropdown-item"
                     onClick={() => handleOption("in3Days")}
                   >
-                    Postpone in 3 days
+                    Postpone for 3 days
                   </button>
                   <button
                     className="dropdown-item"
                     onClick={() => handleOption("in1Week")}
                   >
-Postpone a week
+Postpone for a week
                   </button>
                   <button
                     className="dropdown-item"
@@ -512,13 +512,13 @@ birthday wishes</h4>
                     className="dropdown-item"
                     onClick={() => handleOption("in3Days")}
                   >
-                    Postpone in 3 days
+                    Postpone for 3 days
                   </button>
                   <button
                     className="dropdown-item"
                     onClick={() => handleOption("in1Week")}
                   >
-Postpone a week
+Postpone for a week
                   </button>
                   <button
                     className="dropdown-item"
@@ -571,13 +571,13 @@ her birthday at home.</h4>
                     className="dropdown-item"
                     onClick={() => handleOption("in3Days")}
                   >
-                    Postpone in 3 days
+                    Postpone for 3 days
                   </button>
                   <button
                     className="dropdown-item"
                     onClick={() => handleOption("in1Week")}
                   >
-Postpone a week
+Postpone for a week
                   </button>
                   <button
                     className="dropdown-item"
@@ -633,13 +633,13 @@ Nicole</h4>
                     className="dropdown-item"
                     onClick={() => handleOption("in3Days")}
                   >
-                    Postpone in 3 days
+                    Postpone for 3 days
                   </button>
                   <button
                     className="dropdown-item"
                     onClick={() => handleOption("in1Week")}
                   >
-Postpone a week
+Postpone for a week
                   </button>
                   <button
                     className="dropdown-item"

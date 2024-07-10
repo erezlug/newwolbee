@@ -4,17 +4,24 @@ import AllEmployeeAddPopup from "../../../components/modelpopup/AllEmployeeAddPo
 import Breadcrumbs from "../../../components/Breadcrumbs";
 import DeleteModal from "../../../components/modelpopup/DeleteModal";
 import EmployeeListFilter from "../../../components/EmployeeListFilter";
-import avatar_1 from '../../../imgs/avatar_1.jpg'
-import avatar_2 from '../../../imgs/avatar_2.jpeg'
-import avatar_3 from '../../../imgs/avatar_3.jpeg'
-import avatar_4 from '../../../imgs/avatar_4.jpg'
-import avatar_5 from '../../../imgs/avatar_5.avif'
-import avatar_6 from '../../../imgs/avatar_6.avif'
-
+import lisa from '../../../imgs/avatar_1.JPG'
+import tom from '../../../imgs/avatar_2.JPG'
+import david from '../../../imgs/avatar_3.JPG'
+import nicole from '../../../imgs/avatar_4.JPG'
+import brad from '../../../imgs/avatar_5.JPG'
+import john from '../../../imgs/avatar_6.JPG'
+import mark from '../../../imgs/avatar_7.JPG'
+import josh from '../../../imgs/avatar_8.JPG'
+import justin from '../../../imgs/avatar_9.JPG'
+import selena from '../../../imgs/avatar_10.JPG'
+import emma from '../../../imgs/avatar_11.JPG'
+import sofia from '../../../imgs/avatar_12.JPG'
+import PopUp from "./PopUp";
 const AllEmployee = () => {
   const [employees, setEmployees] = useState([]);
   const [favoriteEmployees, setFavoriteEmployees] = useState([]);
 
+  const avatars = [lisa, tom, david, nicole,john , emma, brad, josh, justin, selena, mark, sofia]
   const toggleFavorite = (event, employeeId) => {
     event.preventDefault(); // מניעת התנהגות ברירת המחדל של הלינק
     const updatedFavoriteEmployees = [...favoriteEmployees]; // העתקת רשימת העובדים המועדפים
@@ -29,12 +36,12 @@ const AllEmployee = () => {
   };
   
 
-  const avatars = [avatar_1, avatar_2,avatar_3,avatar_4,avatar_5,avatar_6 /* הוסף כאן את שאר התמונות */];
+ 
   useEffect(() => {
     const manager = localStorage.getItem('credencial');
     const currentLoggedInManager = JSON.parse(manager);
 
-    fetch('https://wolbee-mvp-2.onrender.com/findemployees', {
+    fetch('http://localhost:5000/findemployees', {
       headers: {
         'Accept': 'application/json', 
         'Content-Type': 'application/json'
@@ -120,7 +127,7 @@ const AllEmployee = () => {
                         data-bs-toggle="modal"
                         data-bs-target="#edit_employee"
                       >
-                        <i className="fa fa-pencil m-r-5" /> ערוך
+                        <i className="fa fa-pencil m-r-5" /> Edit
                       </Link>
                       <Link
                         className="dropdown-item"
@@ -128,7 +135,7 @@ const AllEmployee = () => {
                         data-bs-toggle="modal"
                         data-bs-target="#delete"
                       >
-                        <i className="fa-regular fa-trash-can m-r-5" /> מחק
+                        <i className="fa-regular fa-trash-can m-r-5" /> Delete
                       </Link>
                     </div>
                   </div>
@@ -143,7 +150,7 @@ const AllEmployee = () => {
         </div>
       </div>
 
-      <AllEmployeeAddPopup />
+      <AllEmployeeAddPopup  />
       <DeleteModal Name="מחק עובד" />
     </div>
   );

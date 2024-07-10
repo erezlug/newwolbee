@@ -7,8 +7,9 @@ import axios from "axios";
 import { useForm, Controller } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
+import ProjectDetails from "../../views/pages/Profile/ProfileContent";
 
-const AllEmployeeAddPopup = () => {
+const AllEmployeeAddPopup = (props) => {
   const employee = [
     { value: 1, label: "Select Department" },
     { value: 2, label: "Web Development" },
@@ -698,9 +699,9 @@ const AllEmployeeAddPopup = () => {
                                 height: '40px',
                                 border: 'none',
                                 borderRadius: '5px',
-                                backgroundColor: isAddActivityBtnHovered ?
-                                  '#e3a31d' : '#FEB723',
-                                color: 'black',
+                                background: isAddActivityBtnHovered ?
+                                  '#e3a31d' : 'linear-gradient(to right, #FF902F 0%, #FC6075 100%)',
+                                color: 'white',
                                 transition: 'color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out',
                                 fontSize: '15px'
                               }}>
@@ -845,11 +846,12 @@ const AllEmployeeAddPopup = () => {
                                 height: '40px',
                                 borderRadius: '5px',
                                 border: 'none',
-                                backgroundColor: isAddSingerBtnHovered ? '#e3a31d' :
-                                  '#FEB723',
+                                background: isAddSingerBtnHovered ? '#e3a31d' :
+                                  'linear-gradient(to right, #FF902F 0%, #FC6075 100%)',
                                 fontSize: '15px',
                                 transition: 'color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out',
-                                fontSize: '15px'
+                                fontSize: '15px',
+                                color: 'white'
                               }}>
                               Add singer</button>
                             <div className="col-sm-2">
@@ -954,9 +956,10 @@ const AllEmployeeAddPopup = () => {
                                 height: '40px',
                                 borderRadius: '5px',
                                 border: 'none',
-                                backgroundColor: isAddFoodAndDrinkBtnHovered ? '#e3a31d' :
-                                  '#FEB723',
+                                background: isAddFoodAndDrinkBtnHovered ? '#e3a31d' :
+                                  'linear-gradient(to right, #FF902F 0%, #FC6075 100%)',
                                 fontSize: '15px',
+                                color: 'white',
                                 transition: 'color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out',
                               }}>
                               Add food & drink</button>
@@ -1043,9 +1046,10 @@ const AllEmployeeAddPopup = () => {
                                 height: '40px',
                                 borderRadius: '5px',
                                 border: 'none',
-                                backgroundColor: isAddRestaurantBtnHovered ? '#e3a31d' :
-                                  '#FEB723',
+                                background: isAddRestaurantBtnHovered ? '#e3a31d' :
+                                  'linear-gradient(to right, #FF902F 0%, #FC6075 100%)',
                                 fontSize: '15px',
+                                color: 'white',
                                 transition: 'color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out',
                               }}
                             >Add restaurant
@@ -1152,9 +1156,9 @@ const AllEmployeeAddPopup = () => {
                                 height: '40px',
                                 border: 'none',
                                 borderRadius: '5px',
-                                backgroundColor: isAddHobbyBtnHovered ?
-                                  '#e3a31d' : '#FEB723',
-                                color: 'black',
+                                background: isAddHobbyBtnHovered ?
+                                  '#e3a31d' : 'linear-gradient(to right, #FF902F 0%, #FC6075 100%)',
+                                color: 'white',
                                 transition: 'color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out',
                                 fontSize: '15px'
                               }}>
@@ -2235,6 +2239,7 @@ const AllEmployeeAddPopup = () => {
             </div>
           </div>
         </div>
+        <ProjectDetails></ProjectDetails>
       </div>
     </>
   );

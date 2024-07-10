@@ -3,9 +3,11 @@ const mongoose = require("mongoose");
 const app = express();
 app.use(express.json());
 app.use(express.static("fronted"));
-const cors = require("cors")
-app.use(cors())
+const cors = require("cors");
+app.use(cors());
 const path = require('path');
+const xlsx = require('xlsx');
+
 // התחברות לבסיס הנתונים
 const dbURL = "mongodb+srv://benaloni230:asdf123123@cluster0.3kuoij5.mongodb.net/wolbeedb'";
 mongoose.connect(dbURL, { useNewUrlParser: true, useUnifiedTopology: true })
@@ -15,24 +17,20 @@ mongoose.connect(dbURL, { useNewUrlParser: true, useUnifiedTopology: true })
 const corsOptions = {
   origin: 'http://localhost:3000' // Replace this with your frontend URL
 };
-
 app.use(cors(corsOptions));
 
-
-const xlsx = require('xlsx');
-const workbook = xlsx.readFile('employees.xlsx');
+// קריאת הנתונים מקובץ האקסל
+const workbook = xlsx.readFile('C:/Users/benal/Desktop/‏‏themeforest-psinWIdw-smarthr-react-an-template - עותק/react/template/backend/employeesUpdated.xlsx');
 const worksheet = workbook.Sheets[workbook.SheetNames[0]];
 const data = xlsx.utils.sheet_to_json(worksheet);
 
-// const mongoose = require('mongoose');
-
-//לחבר בין הנתונים של שם פרטי, שם משפחה וקוד שיוך למנהל לאקסל
+// סכמה של עובד
 const employeeSchema = new mongoose.Schema({
   fullName: String,
   employeeOfManagerId: String,
   id: String,
   role: String,
-  DataOfBirth: Date,
+  DataOfBirth: String,
   PlaceOfResidence: String,
   FamilyStatus: String,
   NumOfChildren: Number,
@@ -45,51 +43,38 @@ const employeeSchema = new mongoose.Schema({
   FoodAndDrinks: Array,
   Restaurants: Array,
   Hobbys: Array,
+  TopInsights: Array,
+  LatestInfo: Array,
 });
-
-
-// יצירת מודל של עובד
-// const Employee = mongoose.model("Employee", {
-//   firstName: String,
-//   lastName: String,
-//   employeeOfManagerId: String,
-// })
 
 const Employee = mongoose.model('Employee', employeeSchema);
 
-data.forEach(async (row) => {
-  const employee = new Employee({
-    fullName: row.fullName,
-    employeeOfManagerId: row.employeeOfManagerId,
-    id: row.id,
-    role: row.role,
-    DataOfBirth: row.DataOfBirth,
-    PlaceOfResidence: row.PlaceOfResidence,
-    FamilyStatus: row.FamilyStatus,
-    NumOfChildren: row.NumOfChildren,
-    YearsInTheCompany: row.YearsInTheCompany,
-    Anniversary: row.Anniversary,
-    LastestActivity: [
-      { Date: row.Date, Activity: row.Activity },
-      { Date: row.Date, Activity: row.Activity },
-      { Date: row.Date, Activity: row.Activity },
-    ],
-    InterestingFact: row.InterestingFact,
-    ClosestPersonalEvent: { Date: row.Date, Event: row.Event },
-    singers: [
-      { Singer1: row.singers },
-      { Singer2: row.singers },
-    ],
-    FoodAndDrinks: [
-      { Food1: row.FoodAndDrinks, food2: row.FoodAndDrinks, Drink: row.FoodAndDrinks },
-    ],
-    Restaurants: [{ resturant1: row.Restaurants, resturant2: row.Restaurants }],
-    Hobbys: [{ Hobby1: row.Hobbys, Hobby2: row.Hobbys, Hobby3: row.Hobbys }],
-  });
+// הוספת הנתונים מהאקסל למסד הנתונים
+// data.forEach(async (row) => {
+//   const employee = new Employee({
+//     fullName: row.fullName,
+//     employeeOfManagerId: row.employeeOfManagerId,
+//     id: row.id,
+//     role: row.role,
+//     DataOfBirth: row.DataOfBirth,
+//     PlaceOfResidence: row.PlaceOfResidence,
+//     FamilyStatus: row.FamilyStatus,
+//     NumOfChildren: row.NumOfChildren,
+//     YearsInTheCompany: row.YearsInTheCompany,
+//     Anniversary: row.Anniversary,
+//     LastestActivity: row.LastestActivity || [],
+//     InterestingFact: row.InterestingFact,
+//     ClosestPersonalEvent: row.ClosestPersonalEvent || [],
+//     singers: row.singers ,
+//     FoodAndDrinks: row.FoodAndDrinks || [],
+//     Restaurants: row.Restaurants || [],
+//     Hobbys: row.Hobbys || [],
+//     TopInsights: row.TopInsights || [],
+//     LatestInfo: row.LatestInfo || []
+//   });
 
-  await employee.save();
-});
-
+//   await employee.save();
+// });
 
 // יצירת מודל של מנהל
 const Manager = mongoose.model("User", {
@@ -98,7 +83,7 @@ const Manager = mongoose.model("User", {
   id: String
 });
 
-// POST route לקבלת נתוני המדשתמש מהעמוד ולשמירתם במסד הנתונים
+// POST route לקבלת נתוני המשתמש מהעמוד ולשמירתם במסד הנתונים
 app.post("/register", async (req, res) => {
   try {
     const { email, password, id: managerId } = req.body; // Extract managerId from req.body
@@ -116,20 +101,13 @@ app.post("/register", async (req, res) => {
   }
 });
 
-
 app.post("/login", async (req, res) => {
   try {
-    // קבל את נתוני המשתמש מהבקשה
     const { email, password } = req.body;
-
-    // בדוק במסד הנתונים האם קיים משתמש עם האימייל והסיסמה שהוזנו
     const manager = await Manager.findOne({ email, password });
-    // console.log(manager);
     if (manager) {
-      // אם המשתמש קיים, שלח תשובה חיובית
       res.status(200).json({ message: "Login successful" });
     } else {
-      // אם המשתמש לא קיים, שלח תשובת שגיאה
       res.status(401).json({ message: "Invalid email or password" });
     }
   } catch (error) {
@@ -137,8 +115,6 @@ app.post("/login", async (req, res) => {
     res.status(500).json({ message: "Internal Server Error" });
   }
 });
-
-
 
 app.post("/addemployee", async (req, res) => {
   console.log('hi');
@@ -148,7 +124,6 @@ app.post("/addemployee", async (req, res) => {
       NumOfChildren, YearsInTheCompany, Anniversary, InterestingFact, LastestActivity,
       ClosestPersonalEvent, singers, FoodAndDrinks, Restaurants, Hobbys } = req.body;
 
-    // Validate the required fields
     if (
       fullName && employeeOfManagerId && id && role && DataOfBirth && PlaceOfResidence
       && FamilyStatus && NumOfChildren !== undefined && YearsInTheCompany !== undefined
@@ -174,14 +149,11 @@ app.post("/addemployee", async (req, res) => {
 app.post('/findemployees', async (req, res) => {
   try {
     const manager = req.body;
-    // console.log(manager);
     if (manager) {
       const currentManagerData = await Manager.findOne({
         email: manager.email,
         password: manager.password
-      })
-      // console.log(currentManagerData);
-
+      });
       if (currentManagerData) {
         const employeesArr = await Employee.find({ employeeOfManagerId: currentManagerData.id });
         console.log(employeesArr);

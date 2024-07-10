@@ -7,6 +7,7 @@ import { FaRegBell, FaRegComment } from "react-icons/fa";
 import { useLocation } from "react-router-dom/dist";
 import { useTranslation } from "react-i18next";
 import i18n from "../../i18n";
+import manager from '../../imgs/managerProfilePic.jpg'
 
 const Header = (props) => {
   const initialNotifications = notificationsData.notifications.map(notification => ({
@@ -117,20 +118,20 @@ const Header = (props) => {
     <div className="header" style={{ right: "0px" }}>
       <div className="header-left">
         <Link to="/admin-dashboard" className="logo">
-        <img src={Applogo} alt="img" style={{height:'45px'}} /> 
+        <img src={Applogo} alt="img" style={{height:'42px',marginTop:'-12px'}} /> 
         </Link>
         <Link to="/admin-dashboard" className="logo2">
           <img src={Applogo} width={40} height={40} alt="img" />
         </Link>
       </div>
-      <Link id="toggle_btn" to="#" style={{ display: pathname.includes("tasks") ? "none" : pathname.includes("compose") ? "none" : "" }}>
+      {/* <Link id="toggle_btn" to="#" style={{ display: pathname.includes("tasks") ? "none" : pathname.includes("compose") ? "none" : "" }}>
         <span className="bar-icon">
           <span />
           <span />
           <span />
         </span>
-      </Link>
-      <div className="page-title-box">
+      </Link> */}
+      <div className="page-title-box" style={{marginTop:'5px'}}>
      <h4> Hi  <span style={{ fontWeight: 'bold', fontSize: '20px' }}>  {ProfileName ? `${ProfileName}` : "Admin"} </span>welcome back to wolbee </h4> 
 
 
@@ -224,7 +225,7 @@ const Header = (props) => {
             </div>
           </div >
         </li >
-        <li className={`nav-item dropdown ${isOpen ? "show" : ""}`}>
+        {/* <li className={`nav-item dropdown ${isOpen ? "show" : ""}`}>
           <Link to="#" className="dropdown-toggle nav-link" data-bs-toggle="dropdown" onClick={toggleDropdown}>
             <i><FaRegComment /></i> <span className="badge badge-pill">8</span>
           </Link>
@@ -232,12 +233,12 @@ const Header = (props) => {
             <div className="topnav-dropdown-header">
               <span className="notification-title">Messages</span>
               <Link to="#" className="clear-noti"> Clear All </Link>
-            </div>
-            <div className="noti-content">
+            </div> */}
+            {/* <div className="noti-content">
               <ul className="notification-list">
                 {datas.map((value, index) => (
                   <li className="notification-message" key={index}>
-                    <Link onClick={() => localStorage.setItem("minheight", "true")} to="/conversation/chat">
+                    <Link onClick={() => localStorage.setItem("minheight", "true")} to="#">
                       <div className="list-item">
                         <div className="list-left">
                           <span className="avatar">
@@ -255,23 +256,23 @@ const Header = (props) => {
                   </li>
                 ))}
               </ul>
-            </div>
-            <div className="topnav-dropdown-footer">
-              <Link onClick={() => localStorage.setItem("minheight", "true")} to="/conversation/chat">View all Messages</Link>
+            </div> */}
+            {/* <div className="topnav-dropdown-footer">
+              <Link onClick={() => localStorage.setItem("minheight", "true")} to="#">View all Messages</Link>
             </div>
           </div>
-        </li>
+        </li> */}
         <li className="nav-item dropdown has-arrow main-drop">
           <Link to="#" className="dropdown-toggle nav-link" data-bs-toggle="dropdown" onClick={handleProfile}>
             <span className="user-img me-1">
-              <img src={Avatar_02} alt="img" />
+              <img src={manager} alt="img" />
               <span className="status online" />
             </span>
             <span>{ProfileName ? `${ProfileName}` : "Admin"}</span>
           </Link>
           <div className={`dropdown-menu dropdown-menu-end ${profile ? "show" : ""}`}>
-            <Link className="dropdown-item" to="/profile">My Profile</Link>
-            <Link className="dropdown-item" to="/settings/companysetting">Settings</Link>
+            <Link className="dropdown-item" to="/admin-dashboard">My Profile</Link>
+            <Link className="dropdown-item" to="/settings">Settings</Link>
             <Link className="dropdown-item" to="/">Logout</Link>
           </div>
         </li>
@@ -281,9 +282,9 @@ const Header = (props) => {
           <i className="fa fa-ellipsis-v" />
         </Link>
         <div className="dropdown-menu dropdown-menu-end dropdown-menu-right">
-          <Link className="dropdown-item" to="/profile">My Profile</Link>
-          <Link className="dropdown-item" to="/settings/companysetting">Settings</Link>
-          <Link className="dropdown-item" to="/login">Logout</Link>
+          <Link className="dropdown-item" to="/admin-dashboard">My Profile</Link>
+          <Link className="dropdown-item" to="/settings">Settings</Link>
+          <Link className="dropdown-item" to="/">Logout</Link>
         </div>
       </div>
     </div >

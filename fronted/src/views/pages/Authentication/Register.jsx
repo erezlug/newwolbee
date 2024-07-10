@@ -44,8 +44,8 @@ const Register = (props) => {
       const response = await axios.post("https://wolbee-mvp-2.onrender.com/register", data);
       console.log(response.data); // אולי תרצה להציג הודעה למשתמש שההרשמה הצליחה
       setCheckUser(true);
-      // const managerId = data.id;
-      // localStorage.setItem('managerId', managerId);
+      const managerId = data.id;
+      localStorage.setItem('managerId', managerId);
       navigate("/");
     } catch (error) {
       console.error("Error registering user:", error.response.data);
@@ -61,7 +61,7 @@ const Register = (props) => {
           <div className="container">
             {/* Account Logo */}
             <div className="account-logo">
-              <Link to="/admin-dashboard">
+              <Link to="#">
                 <img src={Applogo} alt="Dreamguy's Technologies" />
               </Link>
             </div>
@@ -197,7 +197,7 @@ const Register = (props) => {
                       </span>
                     </div>
 
-                    <div className="input-block text-center"  style={{ background: 'linear-gradient(to right, white, #FFC502, #FFEA00)' }}>
+                    <div className="input-block text-center"  style={{ background: 'linear-gradient(to right, white, #FFC502, #FFEA00)'}}>
                       <Link
                         to="#"
                         className="btn btn-primary account-btn"

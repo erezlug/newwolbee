@@ -4,10 +4,37 @@ import { Link, useParams } from "react-router-dom";
 import ProfileTab from "./ProfileTab";
 import Breadcrumbs from "../../../components/Breadcrumbs";
 import moment from "moment";
-
+import lisa from '../../../imgs/avatar_1.JPG'
+import tom from '../../../imgs/avatar_2.JPG'
+import david from '../../../imgs/avatar_3.JPG'
+import nicole from '../../../imgs/avatar_4.JPG'
+import brad from '../../../imgs/avatar_5.JPG'
+import john from '../../../imgs/avatar_6.JPG'
+import mark from '../../../imgs/avatar_7.JPG'
+import josh from '../../../imgs/avatar_8.JPG'
+import justin from '../../../imgs/avatar_9.JPG'
+import selena from '../../../imgs/avatar_10.JPG'
+import emma from '../../../imgs/avatar_11.JPG'
+import sofia from '../../../imgs/avatar_12.JPG'
+import { TiPin } from "react-icons/ti";
 const Profile = () => {
   const { employeeId } = useParams();
   const [selectedEmployee, setSelectedEmployee] = useState(null);
+
+  const avatars = {
+    '1': brad,
+    '2': john,
+    '3': lisa,
+    '4': tom,
+    '5': david,
+    '6': nicole,
+    '7': sofia,
+    '8': emma,
+    '9': mark,
+    '10': josh,
+    '11': justin,
+    '12': selena
+  };
 
   useEffect(() => {
     const employeesArrJson = localStorage.getItem('employeesArr');
@@ -26,13 +53,10 @@ const Profile = () => {
     <>
       <div className="page-wrapper">
         <div className="content container-fluid">
-          <Breadcrumbs
-            maintitle="Profile"
-            title="Dashboard"
-            subtitle="Profile"
-            modal="#add_indicator"
-            name="Add New"
-          />
+        <h1>   {selectedEmployee.fullName} Profile</h1>
+        <br />
+        <br />
+        
           <div className="card mb-0">
             <div className="card-body">
               <div className="row">
@@ -41,7 +65,7 @@ const Profile = () => {
                     <div className="profile-img-wrap">
                       <div className="profile-img">
                         <Link to="#">
-                          <img src={Avatar_02} alt="User Image" />
+                        <img src={avatars[selectedEmployee.id]} alt="UserImage" />
                         </Link>
                       </div>
                     </div>
@@ -138,7 +162,7 @@ const Profile = () => {
                       data-bs-toggle="tab"
                       className="nav-link active"
                     >
-                     | Statistics about the employee |
+                     | Insights |
                     </Link>
                   </li>
 
@@ -146,9 +170,9 @@ const Profile = () => {
                     <Link
                       to="#emp_profile"
                       data-bs-toggle="tab"
-                      className="nav-link "
+                      className="nav-link"
                     >
-                     | Profile |
+                     | General info |
                     </Link>
                   </li>
 
@@ -160,7 +184,7 @@ const Profile = () => {
                       data-bs-toggle="tab"
                       className="nav-link"
                     >
-                     | Insights about the employee |
+                     | Training and development |
                     </Link>
                   </li>
                   <li className="nav-item">
@@ -169,7 +193,27 @@ const Profile = () => {
                       data-bs-toggle="tab"
                       className="nav-link"
                     >
-                      | Questions about the employee in the interview |
+                      | Interviews |
+                      <small className="text-danger ms-1"></small>
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link
+                      to="#bank_statutory"
+                      data-bs-toggle="tab"
+                      className="nav-link"
+                    >
+                      | Compensation and benefits |
+                      <small className="text-danger ms-1"></small>
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link
+                      to="#bank_statutory"
+                      data-bs-toggle="tab"
+                      className="nav-link"
+                    >
+                      | Wellness and engagement |
                       <small className="text-danger ms-1"></small>
                     </Link>
                   </li>

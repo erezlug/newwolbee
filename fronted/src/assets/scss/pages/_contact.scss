@@ -101,8 +101,8 @@
 .view-icons  {
     .btn-link {
         &.active {
-            background-color: $primary;
-            border-color: $primary;
+            background: linear-gradient(to right, #FF902F 0%, #FC6075 100%);
+            // border-color: $primary;
             i {
                 color: $white;
             }

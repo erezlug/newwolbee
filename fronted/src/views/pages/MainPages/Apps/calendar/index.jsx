@@ -8,16 +8,14 @@ import axios from "axios";
 import CalendarModal from "../../../../../components/modelpopup/CalendarModal";
 import { useLocation } from "react-router-dom";
 
-
-
 const Calendar = (props) => {
   const [events, setEvents] = useState([]);
   const location = useLocation();
   const linkRef = useRef(null);
   const eventName = location.state?.eventName;
+  const openModal = location.state?.openModal;
   console.log('Location state:', location.state); // הדפס את ערך ה-state של המיקום
   console.log('Event name:', eventName); // הדפס את שם האירוע
-
 
   useEffect(() => {
     const fetchEvents = async () => {
@@ -63,11 +61,13 @@ const Calendar = (props) => {
       className: "bg-info",
     },
   ];
+
   useEffect(() => {
-    if (linkRef.current) {
+    if (openModal && linkRef.current) {
       linkRef.current.click();
     }
-  }, []);
+  }, [openModal]);
+
   return (
     <div className="page-wrapper">
       <div className="content container-fluid">
@@ -75,7 +75,7 @@ const Calendar = (props) => {
         <div className="page-header">
           <div className="row align-items-center">
             <div className="col">
-              <h3 className="page-title">Calender</h3>
+              <h3 className="page-title">Calendar</h3>
               <ul className="breadcrumb">
                 {/* <li className="breadcrumb-item">
                   <Link to="admin-dashboard">Dashboard</Link>
@@ -84,15 +84,15 @@ const Calendar = (props) => {
               </ul>
             </div>
             <div className="col-auto float-end ms-auto">
-            <Link
-  to="#"
-  className="btn add-btn"
-  data-bs-toggle="modal"
-  data-bs-target="#add_event"
-  ref={linkRef}
->
-  <i className="fa-solid fa-plus" /> Add Event
-</Link>
+              <Link
+                to="#"
+                className="btn add-btn"
+                data-bs-toggle="modal"
+                data-bs-target="#add_event"
+                ref={linkRef}
+              >
+                <i className="fa-solid fa-plus" /> Add Event
+              </Link>
             </div>
           </div>
         </div>
@@ -134,7 +134,7 @@ const Calendar = (props) => {
         </div>
       </div>
 
-      <CalendarModal addEvent={addEvent}  />
+      <CalendarModal addEvent={addEvent} />
     </div>
   );
 };

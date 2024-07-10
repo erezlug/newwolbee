@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 import champ from '../../../../imgs/champions.jpeg'
 import pizza from '../../../../imgs/pizza.png'
@@ -11,7 +12,7 @@ import yoga from '../../../../imgs/yoga.png'
 import moon from '../../../../imgs/moon.png'
 import youthday from '../../../../imgs/youthday.png'
 import back from '../../../../imgs/back.png'
-import icecream from '../../../../imgs/ice cream.png'
+import icecream from '../../../../imgs/icecream.png'
 
 import Breadcrumbs from "../../../../components/Breadcrumbs";
 import Modal from 'react-modal';
@@ -45,14 +46,37 @@ import off from '../../../../imgs/off.png'
 import shef from '../../../../imgs/shef.png'
 import DatePicker from 'react-datepicker'; // ייבוא החבילה של DatePicker
 import 'react-datepicker/dist/react-datepicker.css'; // ייבוא עיצוב הסטנדרטי של DatePicker
-
+import { TiPin } from "react-icons/ti";
 
 const TaskBoard = () => {
-  const [modalIsOpen, setModalIsOpen] = useState(true);
+  const [modalIsOpen, setModalIsOpen] = useState(false);
   const [shavuotModalIsOpen, setShavuotModalIsOpen] = useState(false);
   // const [modalIsOpen, setModalIsOpen] = useState(false);
   const [showDatePicker, setShowDatePicker] = useState(false);
   const [selectedDate, setSelectedDate] = useState(new Date());
+
+  const location = useLocation();
+
+
+  useEffect(() => {
+    if (location.state?.fromContact) {
+      setModalIsOpen(true);
+    }
+  }, [location]);
+
+  // useEffect(() => {
+  //   // קביעת הנתיב הקודם מ־localStorage
+  //   const previousPath = localStorage.getItem('previousPath');
+
+  //   // בדיקה האם המשתמש נכנס מנתיב contacts לתוך נתיב task-board
+  //   if (previousPath === "/react/template/contacts" && location.pathname.startsWith("/react/template/task-board")) {
+  //     setModalIsOpen(true); // הצגת המודל אם עברנו מנתיב contacts לתוך נתיב task-board
+  //   }
+
+  //   // שמירת הנתיב הנוכחי ל־localStorage לשימוש בפעם הבאה
+  //   localStorage.setItem('previousPath', location.pathname);
+  // }, [location.pathname]);
+
 
   const openModal = (e) => {
     if (!e || !e.target.closest('.dropdown')) {
@@ -119,7 +143,7 @@ const TaskBoard = () => {
   };
 
  
-
+  const pinIconSize = 20;
   
   
 
@@ -193,15 +217,32 @@ const TaskBoard = () => {
   };
 
   
+  const ulStyle = {
+    listStyleType: 'none',
+    padding: 0,
+  };
   
-
+  const liStyle = {
+    display: 'flex',
+    alignItems: 'flex-start',
+    textAlign: 'left',
+    marginBottom: '10px',
+  };
   
+  const iconStyle = {
+    flexShrink: 0,
+    marginRight: '10px',
+  };
+  
+  const textStyle = {
+    flex: 1,
+  };
   return (
     <>
       <div className="page-wrapper">
         <div className="content container-fluid">
           <Breadcrumbs
-            maintitle="close events"
+            maintitle="Upcoming events"
           
           />
          <div className="row" style={rowStyle}>
@@ -247,13 +288,13 @@ const TaskBoard = () => {
                     className="dropdown-item"
                     onClick={() => handleOption("in3Days")}
                   >
-                    Postpone in 3 days
+                    Postpone for 3 days
                   </button>
                   <button
                     className="dropdown-item"
                     onClick={() => handleOption("in1Week")}
                   >
-Postpone a week
+Postpone for a week
                   </button>
                   <button
                     className="dropdown-item"
@@ -327,16 +368,30 @@ Set a time
       <br />
         <div style={rowStyle} >
           
-        <h2>International Pizza Day</h2>
+<h2>International Pizza Day</h2>
 <p>International Pizza day is coming next month and it is a perfect opportunity to give your team a slice of appreciation</p>
-<ul > 
-<li> - Celebrated on February 9th</li>
-<li> - The largest pizza ever measured was over 122 feet</li>
-<li> - Americans consume a staggering 350 slices of pizza per second</li>
-<li> - The classic Pizza Margherita is said to have been created in 1889 by Neapolitan pizzaiolo Raffaele Esposito. It was named after Queen    Margherita of Italy.</li>
-<li> - The most expensive pizza was sold for €8,300 (approximately $12,000USD) in 2012.</li>
-<li> - Authentic Neapolitan pizza, as defined by the VPN (Associazione Verace Pizza Napoletana) must meet certain criteria including</li>
-</ul>
+<br/>
+<h4>Useful information</h4>
+<ul style={ulStyle}>
+    <li style={liStyle}>
+      <TiPin size={pinIconSize} /> Celebrated on February 9th
+    </li>
+    <li style={liStyle}>
+      <TiPin size={pinIconSize} /> The largest pizza ever measured was over 122 feet
+    </li>
+    <li style={liStyle}>
+      <TiPin size={pinIconSize} /> Americans consume a staggering 350 slices of pizza per second
+    </li>
+    <li style={liStyle}>
+      <TiPin size={pinIconSize} /> The classic Pizza Margherita is said to have been created in 1889 by Neapolitan pizzaiolo Raffaele Esposito. It was named after Queen&nbsp;Margherita of Italy.
+    </li>
+    <li style={liStyle}>
+      <TiPin size={pinIconSize} /> The most expensive pizza was sold for €8,300 (approximately $12,000USD) in 2012.
+    </li>
+    <li style={liStyle}>
+      <TiPin size={pinIconSize} /> Authentic Neapolitan pizza, as defined by the VPN (Associazione Verace Pizza Napoletana) must meet certain criteria including
+    </li>
+  </ul>
 {/* ____1_______ */}
 <div
               className="project-card"
@@ -344,7 +399,7 @@ Set a time
               onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
               onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
             >
-              <Link to="/project/7">
+              <Link to="#">
                 <div className="image-container" style={imageContainerStyle}>
                   <img src={voucher} alt="Project Seven" style={imgStyle} />
                 </div>
@@ -364,7 +419,7 @@ Set a time
               onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
               onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
             >
-              <Link to="/project/7">
+              <Link to="#">
                 <div className="image-container" style={imageContainerStyle}>
                   <img src={dinner} alt="Project Seven" style={imgStyle} />
                 </div>
@@ -385,7 +440,7 @@ your team</h3>
               onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
               onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
             >
-              <Link to="/project/7">
+              <Link to="#">
                 <div className="image-container" style={imageContainerStyle}>
                   <img src={virtual} alt="Project Seven" style={imgStyle} />
                 </div>
@@ -405,7 +460,7 @@ Making Class</h3>
               onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
               onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
             >
-              <Link to="/project/7">
+              <Link to="#">
                 <div className="image-container" style={imageContainerStyle}>
                   <img src={making} alt="Project Seven" style={imgStyle} />
                 </div>
@@ -425,7 +480,7 @@ Class on site</h3>
               onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
               onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
             >
-              <Link to="/project/7">
+              <Link to="#">
                 <div className="image-container" style={imageContainerStyle}>
                   <img src={recognition} alt="Project Seven" style={imgStyle} />
                 </div>
@@ -447,7 +502,7 @@ in your team</h3>
               onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
               onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
             >
-              <Link to="/project/7">
+              <Link to="#">
                 <div className="image-container" style={imageContainerStyle}>
                   <img src={clothes} alt="Project Seven" style={imgStyle} />
                 </div>
@@ -468,7 +523,7 @@ items</h3>
               onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
               onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
             >
-              <Link to="/project/7">
+              <Link to="#">
                 <div className="image-container" style={imageContainerStyle}>
                   <img src={community} alt="Project Seven" style={imgStyle} />
                 </div>
@@ -490,7 +545,7 @@ organization</h3>
               onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
               onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
             >
-              <Link to="/project/7">
+              <Link to="#">
                 <div className="image-container" style={imageContainerStyle}>
                   <img src={trivia} alt="Project Seven" style={imgStyle} />
                 </div>
@@ -513,7 +568,7 @@ rewords</h3>
               onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
               onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
             >
-              <Link to="/project/7">
+              <Link to="#">
                 <div className="image-container" style={imageContainerStyle}>
                   <img src={email} alt="Project Seven" style={imgStyle} />
                 </div>
@@ -534,7 +589,7 @@ team</h3>
               onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
               onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
             >
-              <Link to="/project/7">
+              <Link to="#">
                 <div className="image-container" style={imageContainerStyle}>
                   <img src={shere} alt="Project Seven" style={imgStyle} />
                 </div>
@@ -556,7 +611,7 @@ recipes</h3>
               onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
               onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
             >
-              <Link to="/project/7">
+              <Link to="#">
                 <div className="image-container" style={imageContainerStyle}>
                   <img src={place} alt="Project Seven" style={imgStyle} />
                 </div>
@@ -579,7 +634,7 @@ eat pizza</h3>
               onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
               onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
             >
-              <Link to="/project/7">
+              <Link to="#">
                 <div className="image-container" style={imageContainerStyle}>
                   <img src={vs} alt="Project Seven" style={imgStyle} />
                 </div>
@@ -667,13 +722,13 @@ members</h3>
                     className="dropdown-item"
                     onClick={() => handleOption("in3Days")}
                   >
-                    Postpone in 3 days
+                    Postpone for 3 days
                   </button>
                   <button
                     className="dropdown-item"
                     onClick={() => handleOption("in1Week")}
                   >
-Postpone a week
+Postpone for a week
                   </button>
                   <button
                     className="dropdown-item"
@@ -713,18 +768,49 @@ Set a time
         {/*\\\\\\\\\\\\\\\\\\\\\\\יום הפיצה הבין לאומי הצעות \\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */}
       
         <div style={rowStyle} >
-        <h2>shavout</h2>
-      
-
-<ul > 
-  <h5>General info that you can use for “Savuot”:</h5>
-<li> - falls on the sixth day of Sivan month - Celebrated on June 11th this year.</li>
-<li> - Also called The Harvest Holiday, Chag HaBikkurim (Festival of First Fruits), Chag Matan Torah (Time of the Giving the Torah) etc.t</li>
-<li> - One of the three pilgrimage in Judaism, along with Pesach and Sukkot</li>
-<li> - Falls on the sixth day of Sivan month - Celebrated on June 11th this year</li>
-<li> - Shavuot has strong agricultural themes, as it marks the beginning of the wheat harvest in Israel</li>
-<li> - Israelis consume 1.642 million liters of milk, with one cow producing 12.074 kg annually, making it clear why one of the most well-known customs of Shavuot is the consumption of dairy foods.</li>
-</ul>
+          <br />
+          <br />
+          <br />
+          <br />
+          <div>
+       <div style={{marginLeft:'20px'}}>
+      <h2>Shavuot</h2>
+    </div>
+    <br />
+    
+      <h4 style={{marginRight:'100px'}}>Useful information</h4>
+   
+    </div>
+    <br />
+    <br />
+  
+  <ul style={ulStyle}>
+    <h5>General info that you can use for “Savuot”:</h5>
+    <li style={liStyle}>
+      <TiPin size={pinIconSize} style={iconStyle} />
+      <span style={textStyle}>Falls on the sixth day of Sivan month - Celebrated on June 11th this year.</span>
+    </li>
+    <li style={liStyle}>
+      <TiPin size={pinIconSize} style={iconStyle} />
+      <span style={textStyle}>Also called The Harvest Holiday, Chag HaBikkurim (Festival of First Fruits), Chag Matan Torah (Time of the Giving the Torah) etc.</span>
+    </li>
+    <li style={liStyle}>
+      <TiPin size={pinIconSize} style={iconStyle} />
+      <span style={textStyle}>One of the three pilgrimage in Judaism, along with Pesach and Sukkot</span>
+    </li>
+    <li style={liStyle}>
+      <TiPin size={pinIconSize} style={iconStyle} />
+      <span style={textStyle}>Falls on the sixth day of Sivan month - Celebrated on June 11th this year</span>
+    </li>
+    <li style={liStyle}>
+      <TiPin size={pinIconSize} style={iconStyle} />
+      <span style={textStyle}>Shavuot has strong agricultural themes, as it marks the beginning of the wheat harvest in Israel</span>
+    </li>
+    <li style={liStyle}>
+      <TiPin size={pinIconSize} style={iconStyle} />
+      <span style={textStyle}>Israelis consume 1.642 million liters of milk, with one cow producing 12.074 kg annually, making it clear why one of the most well-known&#8201;customs of Shavuot is the consumption of dairy foods.</span>
+    </li>
+  </ul>
 {/* ____1_______ */}
 <div
               className="project-card"
@@ -732,7 +818,7 @@ Set a time
               onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
               onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
             >
-              <Link to="/project/7">
+              <Link to="#">
                 <div className="image-container" style={imageContainerStyle}>
                   <img src={study} alt="Project Seven" style={imgStyle} />
                 </div>
@@ -755,7 +841,7 @@ knowledgeable speaker</h3>
               onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
               onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
             >
-              <Link to="/project/7">
+              <Link to="#">
                 <div className="image-container" style={imageContainerStyle}>
                   <img src={picnic} alt="Project Seven" style={imgStyle} />
                 </div>
@@ -775,7 +861,7 @@ for your team.</h3>
               onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
               onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
             >
-              <Link to="/project/7">
+              <Link to="#">
                 <div className="image-container" style={imageContainerStyle}>
                   <img src={dairy} alt="Project Seven" style={imgStyle} />
                 </div>
@@ -797,7 +883,7 @@ making facility</h3>
               onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
               onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
             >
-              <Link to="/project/7">
+              <Link to="#">
                 <div className="image-container" style={imageContainerStyle}>
                   <img src={allow} alt="Project Seven" style={imgStyle} />
                 </div>
@@ -819,9 +905,9 @@ prepare for the holiday</h3>
               onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
               onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
             >
-              <Link to="/project/7">
+              <Link to="#">
                 <div className="image-container" style={imageContainerStyle}>
-                  <img src={spaicel} alt="Project Seven" style={imgStyle} />
+                  <img src={gift} alt="Project Seven" style={imgStyle} />
                 </div>
                 <div className="project-details" style={projectDetailsTextStyle}>
                 <h3 style={h3Style}> {<h4 style={{textDecoration:'underline'}}>Personalized gift:</h4>}
@@ -839,7 +925,7 @@ each team member</h3>
               onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
               onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
             >
-              <Link to="/project/7">
+              <Link to="#">
                 <div className="image-container" style={imageContainerStyle}>
                   <img src={happy} alt="Project Seven" style={imgStyle} />
                 </div>
@@ -862,9 +948,9 @@ them a “Happy holiday”</h3>
               onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
               onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
             >
-              <Link to="/project/7">
+              <Link to="#">
                 <div className="image-container" style={imageContainerStyle}>
-                  <img src={recipe} alt="Project Seven" style={imgStyle} />
+                  <img src={shere} alt="Project Seven" style={imgStyle} />
                 </div>
                 <div className="project-details" style={projectDetailsTextStyle}>
                 <h3 style={h3Style}> {<h4 style={{textDecoration:'underline'}}>Recipe Exchange:</h4>}
@@ -883,7 +969,7 @@ share dairy food recipes</h3>
               onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
               onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
             >
-              <Link to="/project/7">
+              <Link to="#">
                 <div className="image-container" style={imageContainerStyle}>
                   <img src={mail} alt="Project Seven" style={imgStyle} />
                 </div>
@@ -906,7 +992,7 @@ other interesting facts</h3>
               onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
               onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
             >
-              <Link to="/project/7">
+              <Link to="#">
                 <div className="image-container" style={imageContainerStyle}>
                   <img src={cheese} alt="Project Seven" style={imgStyle} />
                 </div>
@@ -926,7 +1012,7 @@ between team members</h3>
               onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
               onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
             >
-              <Link to="/project/7">
+              <Link to="#">
                 <div className="image-container" style={imageContainerStyle}>
                   <img src={recognition} alt="Project Seven" style={imgStyle} />
                 </div>
@@ -949,7 +1035,7 @@ individuals in your team</h3>
               onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
               onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
             >
-              <Link to="/project/7">
+              <Link to="#">
                 <div className="image-container" style={imageContainerStyle}>
                   <img src={cheesedinner} alt="Project Seven" style={imgStyle} />
                 </div>
@@ -970,9 +1056,9 @@ or dinner for your team</h3>
               onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
               onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
             >
-              <Link to="/project/7">
+              <Link to="#">
                 <div className="image-container" style={imageContainerStyle}>
-                  <img src={cheesetrivia} alt="Project Seven" style={imgStyle} />
+                  <img src={trivia} alt="Project Seven" style={imgStyle} />
                 </div>
                 <div className="project-details" style={projectDetailsTextStyle}>
                 <h3 style={h3Style}> {<h4 style={{textDecoration:'underline'}}>Shavuot Trivia Game:</h4>}
@@ -1005,7 +1091,7 @@ customs, and traditions</h3>
               onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
               onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
             >
-              <Link to="https://api.whatsapp.com/send?phone=972525242172&text=היי+מה+שלומך+עבדת+מצוין+השבוע+מבחינתי+את\ה+יכול+לצאת+מוקדם+יותר+הביתה+">
+              <Link to="#">
                 <div className="image-container" style={imageContainerStyle}>
                   <img src={school} alt="Project Four" style={imgStyle} />
                 </div>
@@ -1039,13 +1125,13 @@ customs, and traditions</h3>
                     className="dropdown-item"
                     onClick={() => handleOption("in3Days")}
                   >
-                    Postpone in 3 days
+                    Postpone for 3 days
                   </button>
                   <button
                     className="dropdown-item"
                     onClick={() => handleOption("in1Week")}
                   >
-Postpone a week
+Postpone for a week
                   </button>
                   <button
                     className="dropdown-item"
@@ -1065,7 +1151,7 @@ Set a time
               onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
               onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
             >
-              <Link to="/events">
+              <Link to="#">
                 <div className="image-container" style={imageContainerStyle}>
                   <img src={yoga} alt="Project Six" style={imgStyle} />
                 </div>
@@ -1099,13 +1185,13 @@ Set a time
                     className="dropdown-item"
                     onClick={() => handleOption("in3Days")}
                   >
-                    Postpone in 3 days
+                    Postpone for 3 days
                   </button>
                   <button
                     className="dropdown-item"
                     onClick={() => handleOption("in1Week")}
                   >
-Postpone a week
+Postpone for a week
                   </button>
                   <button
                     className="dropdown-item"
@@ -1123,7 +1209,7 @@ Set a time
               onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
               onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
             >
-              <Link to="/project/7">
+              <Link to="#">
                 <div className="image-container" style={imageContainerStyle}>
                   <img src={america} alt="Project Seven" style={imgStyle} />
                 </div>
@@ -1158,13 +1244,13 @@ day</h1>
                     className="dropdown-item"
                     onClick={() => handleOption("in3Days")}
                   >
-                    Postpone in 3 days
+                    Postpone for 3 days
                   </button>
                   <button
                     className="dropdown-item"
                     onClick={() => handleOption("in1Week")}
                   >
-Postpone a week
+Postpone for a week
                   </button>
                   <button
                     className="dropdown-item"
@@ -1182,7 +1268,7 @@ Set a time
               onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
               onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
             >
-              <Link to="https://wa.me/545287587?text=המון+מזל+טוב+ליום+הולדת+אתה+יכול+להישאר+בבית+היום+לחגוג+את+היום+הולדת+שלך+בכיף+">
+              <Link to="#">
                 <div className="image-container" style={imageContainerStyle}>
                   <img src={soccer} alt="Project Eight" style={imgStyle} />
                 </div>
@@ -1216,13 +1302,13 @@ Set a time
                     className="dropdown-item"
                     onClick={() => handleOption("in3Days")}
                   >
-                    Postpone in 3 days
+                    Postpone for 3 days
                   </button>
                   <button
                     className="dropdown-item"
                     onClick={() => handleOption("in1Week")}
                   >
-Postpone a week
+Postpone for a week
                   </button>
                   <button
                     className="dropdown-item"
@@ -1240,7 +1326,7 @@ Set a time
               onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
               onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
             >
-              <Link to="https://www.xtra.co.il/category/attractions">
+              <Link to="#">
                 <div className="image-container" style={imageContainerStyle}>
                   <img src={moon} alt="Project Nine" style={imgStyle} />
                 </div>
@@ -1274,13 +1360,13 @@ Set a time
                     className="dropdown-item"
                     onClick={() => handleOption("in3Days")}
                   >
-                    Postpone in 3 days
+                    Postpone for 3 days
                   </button>
                   <button
                     className="dropdown-item"
                     onClick={() => handleOption("in1Week")}
                   >
-Postpone a week
+Postpone for a week
                   </button>
                   <button
                     className="dropdown-item"
@@ -1298,7 +1384,7 @@ Set a time
               onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
               onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
             >
-              <Link to="https://www.xtra.co.il/category/attractions">
+              <Link to="#">
                 <div className="image-container" style={imageContainerStyle}>
                   <img src={icecream} alt="Project Nine" style={imgStyle} />
                 </div>
@@ -1332,13 +1418,13 @@ Set a time
                     className="dropdown-item"
                     onClick={() => handleOption("in3Days")}
                   >
-                    Postpone in 3 days
+                    Postpone for 3 days
                   </button>
                   <button
                     className="dropdown-item"
                     onClick={() => handleOption("in1Week")}
                   >
-Postpone a week
+Postpone for a week
                   </button>
                   <button
                     className="dropdown-item"
@@ -1372,13 +1458,13 @@ Set a time
                     className="dropdown-item"
                     onClick={() => handleOption("in3Days")}
                   >
-                    Postpone in 3 days
+                    Postpone for 3 days
                   </button>
                   <button
                     className="dropdown-item"
                     onClick={() => handleOption("in1Week")}
                   >
-Postpone a week
+Postpone for a week
                   </button>
                   <button
                     className="dropdown-item"
@@ -1396,7 +1482,7 @@ Set a time
               onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
               onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
             >
-              <Link to="https://www.xtra.co.il/category/attractions">
+              <Link to="#">
                 <div className="image-container" style={imageContainerStyle}>
                   <img src={youthday} alt="Project Nine" style={imgStyle} />
                 </div>
@@ -1430,13 +1516,13 @@ Set a time
                     className="dropdown-item"
                     onClick={() => handleOption("in3Days")}
                   >
-                    Postpone in 3 days
+                    Postpone for 3 days
                   </button>
                   <button
                     className="dropdown-item"
                     onClick={() => handleOption("in1Week")}
                   >
-Postpone a week
+Postpone for a week
                   </button>
                   <button
                     className="dropdown-item"
@@ -1454,7 +1540,7 @@ Set a time
               onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
               onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
             >
-              <Link to="https://www.xtra.co.il/category/attractions">
+              <Link to="#">
                 <div className="image-container" style={imageContainerStyle}>
                   <img src={back} alt="Project Nine" style={imgStyle} />
                 </div>
@@ -1487,13 +1573,13 @@ Set a time
                     className="dropdown-item"
                     onClick={() => handleOption("in3Days")}
                   >
-                    Postpone in 3 days
+                    Postpone for 3 days
                   </button>
                   <button
                     className="dropdown-item"
                     onClick={() => handleOption("in1Week")}
                   >
-Postpone a week
+Postpone for a week
                   </button>
                   <button
                     className="dropdown-item"
